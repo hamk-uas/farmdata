@@ -106,28 +106,30 @@ print(sentence)
 
 **Use the second name in the sentence.** Hint: For example resulting in “Our names are Peter and Eva”.
 
-## Python exercise 1: Fibonacci numbers
-
-Fibonacci numbers begin is a number series that begins with 0 and 1 and the following entries are sum of preceding two.
-
-**Write a Python code that prints the 15 first Fibonacci numbers.** (Hint: Use of AI is allowed.)
-
-**Return a screenshot of code and output to Moodle.** Below is an example of a screenshot for another piece of code.
-
-<img src="assets/analyzing-data/media/image10.png" style="width:5.83333in;height:3.36458in" />
-
-The code cell has a gray background and the output has a white background. The example program has been commented in Finnish. The progam defines a straight line with a slope of 2 and a y intercept of 3, and prints (x, y) values on the line for x-values 1, 3, 5,7, and 9.
+[Exercise 1: Fibonacci numbers](Exercise1.md)
 
 # 2. Lecture 4.11.2026
 
+[Exercise 2](Exercise2.md)
+
 # 3. Lecture 11.11.2026
+
+[Exercise 3](Exercise3.md)
 
 # 4. Lecture 18.11.2026
 
+[Exercise 4](Exercise4.md)
+
 # 5. Lecture 25.11.2026
+
+[Exercise 5](Exercise5.md)
 
 # 6. Lecture 2.12.2026
 
+[Exercise 6](Exercise6.md)
+
 # 7. Lecture 9.12.2026
+
+[Exercise 7](Exercise7.md)
 
 # 8. Report presentations 15.12.2026

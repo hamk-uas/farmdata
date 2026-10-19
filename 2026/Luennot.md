@@ -108,24 +108,30 @@ print(sentence)
 
 **Lisää uusi nimi lauseeseen uutta muuttujaa käyttäen.** Lopputuloksena esim. “Meidän nimemme ovat Petri ja Eeva”.
 
-## Python-harjoitus 1: Fibonaccin luvut
-
-Fibonaccin luvut ovat sarja kokonaislukuja, joka alkaa luvuilla 0 ja 1. Seuraavat luvut ovat kahden edellisen luvun summia.\
-**Kirjoita Python-ohjelmakoodi, joka tulostaa 15 ensimmäistä Fibonaccin lukua.\
-Palauta kuvakaappaus koodista ja tulosteesta.** Alla on esimerkki kuvakaappauksesta koodille joka laskee pisteitä viivalla.
-
-<img src="assets/datatalous/media/image7.png" style="width:5.83333in;height:3.36458in" />
+[Harjoitus 1: Fibonaccin luvut](Harjoitus1.md)
 
 # 2. Luento 4.11.2026
 
+[Harjoitus 2](Harjoitus2.md)
+
 # 3. Luento 11.11.2026
+
+[Harjoitus 3](Harjoitus3.md)
 
 # 4. Luento 18.11.2026
 
+[Harjoitus 4](Harjoitus4.md)
+
 # 5. Luento 25.11.2026
+
+[Harjoitus 5](Harjoitus5.md)
 
 # 6. Luento 2.12.2026
 
+[Harjoitus 6](Harjoitus6.md)
+
 # 7. Luento 9.12.2026
+
+[Harjoitus 7](Harjoitus7.md)
 
 # 8. Raporttien purkutilaisuus 15.12.2026
