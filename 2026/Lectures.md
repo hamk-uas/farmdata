@@ -56,21 +56,19 @@ A python program or a code cell is run line-by line from top to bottom by the Py
 
 ### Comments, variables, types (numbers, strings), basic math, print
 
-\# This is a comment. Comments begin with \# and will not be run.
+```python
+# This is a comment. Comments begin with # and will not be run.
 
-\# Assign numerical values to variables
-
+# Assign numerical values to variables
 x = 5
-
 y = 2.5
 
-\# Assign the result of a basic calculation to a variable
-
+# Assign the result of a basic calculation to a variable
 result = x + y
 
-\# Print the value of a numerical variable
-
-print(result) \# Prints 7.5
+# Print the value of a numerical variable
+print(result) # Prints 7.5
+```
 
 Spaces can be freely added to the code between words to make the code more readable, except at the beginning of each line where they are used to split the code into blocks (to be explained later) in Python.
 
@@ -86,25 +84,21 @@ The last code line above is an example of calling a function. A function is call
 
 ### Lecture continues
 
-\# Assign a string value to a variable
-
+```python
+# Assign a string value to a variable
 sentence = "My name is"
 
-\# Concatenate strings
-
+# Concatenate strings
 name = "Peter"
-
 sentence = sentence + " " + name
 
-\# Print the value of a string variable
-
+# Print the value of a string variable
 print(sentence)
 
-\# Do the same using a formatted string
-
+# Do the same using a formatted string
 sentence = f"My name is {name}"
-
 print(sentence)
+```
 
 ### Exercise pause during the lecture
 

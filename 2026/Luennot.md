@@ -58,21 +58,19 @@ Python-tulkki ajaa Python-ohjelman tai koodisolun koodin rivi kerrallaan ylhää
 
 ### Kommentit, muuttujat, tyypit (numerot, merkkijonot), peruslaskutoimitukset, tulostus
 
-\# Tämä on kommentti. Kommentit alkavat \#-merkillä, eikä niitä suoriteta.
+```python
+# Tämä on kommentti. Kommentit alkavat #-merkillä, eikä niitä suoriteta.
 
-\# Määritä muuttujille numeeriset arvot (engl. numerical values)
-
+# Määritä muuttujille numeeriset arvot (engl. numerical values)
 x = 5
-
 y = 2.5
 
-\# Sijoita tulos muuttujaan (engl. variable)
-
+# Sijoita tulos muuttujaan (engl. variable)
 result = x + y
 
-\# Tulosta numeerisen muuttujan arvo
-
-print(result) \# Tulostaa 7.5
+# Tulosta numeerisen muuttujan arvo
+print(result) # Tulostaa 7.5
+```
 
 Pythonissa välilyönneillä rivin alussa jaotellaan koodia lohkoihin, mihin tutustutaan myöhemmin. Muuten välilyöntejä voi laittaa koodin sekaan varsin vapaasti. Välilyöntien sopiva käyttö tekee koodista luettavampaa.
 
@@ -88,25 +86,21 @@ Viimeinen rivi on myös esimerkki funktion kutsumisesta, tässä tapauksessa Pyt
 
 ### Luento jatkuu
 
-\# Määritä muuttujalle merkkijonoarvo (engl. string)
-
+```python
+# Määritä muuttujalle merkkijonoarvo (engl. string)
 sentence = "Nimeni on"
 
-\# Liitä merkkijonot (engl. concatenate)
-
+# Liitä merkkijonot (engl. concatenate)
 name = "Petri"
-
 sentence = sentence + " " + name
 
-\# Tulosta merkkijonomuuttujan arvo
-
+# Tulosta merkkijonomuuttujan arvo
 print(sentence)
 
-\# Tee sama käyttämällä muotoiltua merkkijonoa (engl. formatted string)
-
+# Tee sama käyttämällä muotoiltua merkkijonoa (engl. formatted string)
 sentence = f"Nimeni on {name}"
-
 print(sentence)
+```
 
 ### Harjoitustauko luennolla
 
