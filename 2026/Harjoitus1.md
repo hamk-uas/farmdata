@@ -19,6 +19,7 @@ print(talla_rivilla) # <--- !
 ```
 ## Täydennettävä ohjelmakoodi
 
+```
 # -----------
 # 1. Harjoitellaan lukujen käsittelyn perusteet
 # Täydennä lukujen a ja b summa, erotus ja tulo
@@ -112,6 +113,7 @@ ka2 = df["Rainfall"].mean()
 # pidämmen osan pituuteen. Pyydä tekoälyä luomaan koodi, jolla voit laskea
 # kultaisen leikkauksen mukaisen jaon haluamasi pituiselle janalle ja kopioi
 # koodi tähän alle.
+```
 
 
 [Takaisin luentomuistiinpanoihin](Luennot.md)
