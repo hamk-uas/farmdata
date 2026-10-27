@@ -20,26 +20,30 @@ To include an image in a Markdown file, use the following syntax:
 ![alt text](image_path)
 ```
 
+**Important:** Image paths are relative to the location of the Markdown file itself, not the repository root.
+
 **Examples:**
 
-1. **Basic image reference:**
+1. **For files in the repository root (e.g., README.md):**
    ```markdown
    ![A farm landscape](2026/assets/farm.png)
-   ```
-
-2. **With custom dimensions (HTML syntax):**
-   ```markdown
    <img src="2026/assets/analyzing-data/media/image5.png" style="width:5.83333in;height:3.36458in" />
    ```
 
-3. **Relative path from the Markdown file location:**
+2. **For files in `2026/` subdirectory (e.g., Lectures.md, Harjoitus1.md):**
    ```markdown
-   ![Description](assets/analyzing-data/media/image5.png)
+   ![A farm landscape](assets/farm.png)
+   <img src="assets/analyzing-data/media/image5.png" style="width:5.83333in;height:3.36458in" />
+   ```
+
+3. **For files in nested subdirectories, use `../` to go up:**
+   ```markdown
+   ![Example](../assets/analyzing-data/media/image5.png)
    ```
 
 **Tips:**
 - Always provide descriptive `alt text` for accessibility
+- Remember that relative paths are from the Markdown file's location, not the repo root
 - Store images in organized subdirectories under `2026/assets/`
-- Use relative paths for portability
 - For precise sizing, use HTML `<img>` tags with style attributes
 - Supported formats: PNG, JPG, GIF, SVG
