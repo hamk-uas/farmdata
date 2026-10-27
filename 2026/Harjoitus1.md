@@ -1,4 +1,4 @@
-# Python-harjoitus 1
+# Harjoitus 1
 
 Luennon päivämäärä: 28.10.2026
 
