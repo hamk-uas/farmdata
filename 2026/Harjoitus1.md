@@ -6,16 +6,16 @@ Luennon päivämäärä: 28.10.2026
 Kopio alla oleva koodi yhteen ohjelmasoluun Colabin Python Notebookissa ja täydennä ohjeiden mukaan puuttuvat kohdat.
 
 ## Kommenttiriveistä
-Osa riveistä alkaa kommenttimerkkeillä, jotta koodia voi suorittaa ilman virheilmoituksia vaiheittain etenemällä. Nämä rivit on merkitty rivin lopussa olevalla `# <--- !` merkillä. Esimerkki
+Osa riveistä alkaa kommenttimerkeillä, jotta koodia voi suorittaa ilman virheilmoituksia vaiheittain etenemällä. Nämä rivit on merkitty `# Poista kommenttimerkki rivin alusta`. Esimerkki
 
 ```
-# talla_rivilla = "Tällä rivillä on kommenttimerkki rivin alussa ja se ei siksi tulostu" # <--- !
-# print(talla_rivilla) # <--- !
+# talla_rivilla = "Tällä rivillä on kommenttimerkki rivin alussa ja se ei siksi tulostu" # Poista kommenttimerkki rivin alusta
+# print(talla_rivilla) # Poista kommenttimerkki rivin alusta
 ```
 ja kun etenet tehtävää kyseiselle riville, riittää poistaa kommenttimerkki, jotta rivi tulee mukaan ohjelmaan ja tulostus näkyviin eli
 ```
-talla_rivilla = "Tällä rivillä on kommenttimerkki rivin alussa ja se ei siksi tulostu" # <--- !
-print(talla_rivilla) # <--- !
+talla_rivilla = "Tällä rivillä on kommenttimerkki rivin alussa ja se ei siksi tulostu" # Poista kommenttimerkki rivin alusta
+print(talla_rivilla) # Poista kommenttimerkki rivin alusta
 ```
 ## Täydennettävä ohjelmakoodi
 
@@ -26,13 +26,13 @@ print(talla_rivilla) # <--- !
 a = 10
 b = 3
 
-#summa = # <--- !
-#erotus = # <--- !
-#tulo = # <--- !
+#summa =   # Poista kommenttimerkki rivin alusta
+#erotus =  # Poista kommenttimerkki rivin alusta
+#tulo =    # Poista kommenttimerkki rivin alusta
 
-#print("Summa:", summa) # <--- !
-#print("Erotus:", erotus) # <--- !
-#print("Tulo:", tulo) # <--- !
+#print("Summa:", summa)    # Poista kommenttimerkki rivin alusta
+#print("Erotus:", erotus)  # Poista kommenttimerkki rivin alusta
+#print("Tulo:", tulo)      # Poista kommenttimerkki rivin alusta
 
 # -----------
 # 2. Täydennä muuttujat. Nimi on merkkijono ja ikä numero
@@ -61,8 +61,8 @@ print("Karkausvuosia elämässäsi:", leap_years)
 # 5. Nyt voidaan laskea montako päivää henkilö on vanha eli kerrotaan ikä
 # tavallisen vuoden päivien määrällä 365 ja lisätään siihen karkauspäivien määrä
 
-# age_in_days =  # <--- !
-# print("Ikä päivinä:", ) # <--- !
+# age_in_days =            # Poista kommenttimerkki rivin alusta
+# print("Ikä päivinä:", )  # Poista kommenttimerkki rivin alusta
 
 # -----------
 # 6. Tutustutaan pienesti vielä taulukkoon datarakenteena. Täydennä loppuun 
@@ -101,11 +101,11 @@ summa2 = df["Rainfall"].sum()
 ka1 = df["Temperature"].mean()
 ka2 = df["Rainfall"].mean()
 
-#print("Lämpötilasumma:", ) # <--- !
-#print("Sademääräsumma:", ) # <--- !
+#print("Lämpötilasumma:", )  # Poista kommenttimerkki rivin alusta
+#print("Sademääräsumma:", )  # Poista kommenttimerkki rivin alusta
 
-#print("Lämpötilojen keskiarvo:", ) # <--- !
-#print("Sademäärien keskiarvo:", ) # <--- !
+#print("Lämpötilojen keskiarvo:", )  # Poista kommenttimerkki rivin alusta
+#print("Sademäärien keskiarvo:", )   # Poista kommenttimerkki rivin alusta
 
 # -----------
 # 7. Kultainen leikkaus on piste janalla, joka jakaa janan niin, että pidemmän osan
