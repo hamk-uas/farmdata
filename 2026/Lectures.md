@@ -136,4 +136,4 @@ print(sentence)
 
 (No exercise)
 
-The report presentations session is on 15.12.2026.
+The report presentations session is on 15.12.2026. Try to utilize the programmatic data analysis skills you've gained in your presentation and report. For example, you can acquire and merge external data into your project data and analyze them together, using Python in whatever work stages you want.
