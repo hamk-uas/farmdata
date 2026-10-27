@@ -3,7 +3,7 @@
 Luennon päivämäärä: 28.10.2026
 
 ## Tehtävä
-Kopio alla oleva koodi yhteen ohjelmasoluun Colabin Python Notebookissa ja täydennä ohjeiden mukaan puuttuvat kohdat.
+Kopio alla oleva koodi yhteen ohjelmasoluun Colabin Python Notebookissa ja täydennä ohjeiden mukaan puuttuvat kohdat. Tee tiedostosta lopuksi PDF-tuloste ja palaute se Moodleen.
 
 ## Kommenttiriveistä
 Osa riveistä alkaa kommenttimerkillä, jotta koodia voi suorittaa ilman virheilmoituksia vaiheittain etenemällä. Nämä rivit on merkitty `# Poista kommenttimerkki`. Esimerkki
