@@ -134,6 +134,6 @@ print(sentence)
 
 # 7. Lecture 9.12.2026
 
-[Exercise 7](Exercise7.md)
+(No exercise)
 
-# 8. Report presentations 15.12.2026
+The report presentations session is on 15.12.2026.

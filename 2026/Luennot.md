@@ -134,6 +134,6 @@ print(sentence)
 
 # 7. Luento 9.12.2026
 
-[Harjoitus 7](Harjoitus7.md)
+(Ei harjoitusta)
 
-# 8. Raporttien purkutilaisuus 15.12.2026
+Raporttien purkutilaisuus on 15.12.2026.
