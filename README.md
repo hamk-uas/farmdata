@@ -5,7 +5,8 @@
 
 Lectures 1–7 link to weekly exercises in both languages.
 
-## Adding images to Markdown
+## Information for teachers
+### Adding images to Markdown
 
 Store images in organized subdirectories under `2026/assets/`. Supported formats: PNG, JPG, GIF, SVG.
 
