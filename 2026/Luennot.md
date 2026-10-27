@@ -136,4 +136,4 @@ print(sentence)
 
 (Ei harjoitusta)
 
-Raporttien purkutilaisuus on 15.12.2026.
+Raporttien purkutilaisuus on 15.12.2026. Pyrkikää hyödyntämään esityksessä ja raportissa ohjelmallisen data-analyysin osuudessa saamianne taitoja. Voitte esim. hankkia ja yhdistää ulkopuolista dataa projektidataan ja analysoida niitä yhdessä, käyttäen Pythonia haluamissanne työvaiheissa.
