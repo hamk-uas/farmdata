@@ -3,7 +3,8 @@
 - [Exploiting agricultural data - Programmatic data analysis (English)](2026/Lectures.md)
 - [Maatalouden datan hyödyntäminen - Ohjelmallinen data-analyysi (Finnish)](2026/Luennot.md)
 
-Lectures link to weekly exercises in both languages.
+Lecture notes link to weekly exercises.\
+Luentomateriaaleissa on linkit viikkotehtäviin.
 
 ## For teachers: Adding images to Markdown
 
