@@ -45,4 +45,4 @@ print(df_seinajoki.head().to_string())
 
 Jos saat lopuksi tämänkaltaisen tuloksen, olet varmasti oikeilla jäljillä. Kuvaajien asettelu, värit ja määrä voi vaihdella, mutta käyrien pitäisi likipitäen näyttää tältä.
 
-![jotain](assets/analyzing-data/media/Exercise2example.png)
+![](assets/analyzing-data/media/Exercise2example.png)
