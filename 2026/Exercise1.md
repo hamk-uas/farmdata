@@ -3,7 +3,7 @@
 Lecture date: 28.10.2026
 
 ## Task
-Copy the code below into a single code cell in a Colab Python Notebook and complete the missing parts according to the instructions.
+Copy the code below into a single code cell in a Colab Python Notebook and complete the missing parts according to the instructions. Print the completed exercise to a PDF file and return it to Moodle.
 
 ## About Comment Lines
 Some lines start with a comment marker so that the code can be executed without errors while progressing step by step. These lines are marked with `# Remove comment marker`. Example:
