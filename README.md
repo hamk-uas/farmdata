@@ -1,18 +1,16 @@
 # farmdata
-Example farm data
+Lecture notes and exercises for Maatalouden datan hyödyntäminen / Exploiting agricultural data 2026.
 
 ## Lecture notes
 
 - [Analyzing data (English)](2026/Lectures.md)
 - [Datatalous (Finnish)](2026/Luennot.md)
 
-The Markdown versions are being revised for autumn 2026. Lecture 1 retains its
-original content; sessions 2–8 are pending revision.
-Lectures 1–7 link to separate exercise files in both languages. Exercise 1 contains
-the Fibonacci assignment; exercises 2–7 are placeholders pending revision.
-Images used by the lecture notes are stored in `2026/assets/`.
+Lectures 1–7 link to separate exercise files in both languages.
 
 ## Adding images to Markdown
+
+Store images in organized subdirectories under `2026/assets/`. Supported formats: PNG, JPG, GIF, SVG.
 
 To include an image in a Markdown file, use the following syntax:
 
@@ -40,10 +38,3 @@ To include an image in a Markdown file, use the following syntax:
    ```markdown
    ![Example](../assets/analyzing-data/media/image5.png)
    ```
-
-**Tips:**
-- Always provide descriptive `alt text` for accessibility
-- Remember that relative paths are from the Markdown file's location, not the repo root
-- Store images in organized subdirectories under `2026/assets/`
-- For precise sizing, use HTML `<img>` tags with style attributes
-- Supported formats: PNG, JPG, GIF, SVG
