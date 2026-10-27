@@ -1,4 +1,4 @@
-# Python Exercise 1
+# Exercise 1
 
 Lecture date: 28.10.2026
 
