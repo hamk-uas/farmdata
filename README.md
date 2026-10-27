@@ -1,10 +1,7 @@
-# farmdata
-Lecture notes and exercises for Maatalouden datan hyödyntäminen / Exploiting agricultural data 2026.
+## Programmatic data analysis lecture notes and exercises
 
-## Lecture notes
-
-- [Analyzing data (English)](2026/Lectures.md)
-- [Datatalous (Finnish)](2026/Luennot.md)
+- [Exploiting agricultural data - Programmatic data analysis (English)](2026/Lectures.md)
+- [Maatalouden datan hyödyntäminen - Ohjelmallinen data-analyysi (Finnish)](2026/Luennot.md)
 
 Lectures 1–7 link to separate exercise files in both languages.
 
