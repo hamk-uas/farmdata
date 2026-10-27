@@ -1,12 +1,11 @@
-## Programmatic data analysis lecture notes
+## Programmatic data analysis lecture notes / Ohjelmallisen data-analyysin luentomuistiinpanot
 
 - [Exploiting agricultural data - Programmatic data analysis (English)](2026/Lectures.md)
 - [Maatalouden datan hyödyntäminen - Ohjelmallinen data-analyysi (Finnish)](2026/Luennot.md)
 
 Lectures 1–7 link to weekly exercises in both languages.
 
-## Information for teachers
-### Adding images to Markdown
+## For teachers: Adding images to Markdown
 
 Store images in organized subdirectories under `2026/assets/`. Supported formats: PNG, JPG, GIF, SVG.
 
