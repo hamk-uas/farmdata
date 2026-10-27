@@ -1,16 +1,20 @@
 Autumn 2026
 
-© 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Olli Koskela, Olli Niemitalo
+© 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
 
 # 1. Lecture 28.10.2026 Colab, Python basics part 1
 
 ## Python
 
-Python is programming language that is very popular for data analysis. Writing a program for data analysis is convenient because a program only needs to be written once and can then be used repeatedly with different input data. Because of Python’s popularity, there is plenty of english-language help available on Internet, available through for example Google searches and AI chats. The capabilities of Python can be extended using *modules*, for example in order to easily manipulate arrays of numbers, or for plotting, etc. Modules typically have their own on-line documentation that can be consulted.
+Python is a programming language that is very popular for data analysis. Writing a program for data analysis is convenient because a program only needs to be written once and can then be used repeatedly with different input data. The capabilities of Python can be extended using *modules*, for example in order to easily manipulate tabular data or for plotting, etc. Modules typically have their own online documentation that can be consulted.
 
-You don’t need to memorize how exactly something can be done in Python. Just google or ask AI about it! Typically, many people have had the same problem that you might have, and have asked for help for example in [<u>Stack Overflow</u>](https://stackoverflow.com/), a free question and answer service. Sometimes it is enough to use the error message as a search key or AI prompt.
+Because of Python's popularity, AI tools are very familiar with it and you should seek help using AI (AI) chats. Over the past year, a more modern way of utilizing AI, using AI agents that independently develop programs, has become more powerful than chats. Agents are able to create source code files, run them, test program functionality, and fix bugs. Agent features may also be available in AI chats.
 
-Artificial intelligence (AI) tools can help you and you can use those freely in this course for code generation. For you it is probably more important to “get the job done” than to become a fluent Python programmer. You can think of AI as an assistant that writes code for you. Google Colab built-in Gemini AI is covered in the next section. Other useful AI for Python code generation include ChatGPT, Gemini, Copilot, Grok, Manus, and Claude. They are free for small-scale use and are increasingly able to run and test code.
+To help AI assist you to the best of its ability, you should tell it in your "prompt" what problem you are trying to solve, what thoughts you have about the solution, how confident you are about them, or whether you want AI to choose the solution methods itself. If an error occurs during program execution, the error message itself is useful information for AI to understand the error, and you should provide it.
+
+Artificial intelligence (AI) tools can help you and you can use those freely in this course for code generation. For you it is probably more important to "get the job done" than to become a fluent Python programmer. You can think of AI as an assistant that writes code for you. Google Gemini AI is covered in the next section. Other useful AI tools for Python code generation include ChatGPT, Gemini, Copilot, Mistral, Grok, Manus, and Claude. Using them to a small extent is free and increasingly many of them are able to run and test code themselves. When credits run out in one service you can switch to another.
+
+If you intend to send AI information that is confidential or private, make sure you have permission to do so. You may need to check the AI service's terms of use and privacy policy for how the data you send is used. Also consider whether you trust the service provider.
 
 ## Colab
 
@@ -38,21 +42,21 @@ The runtime is a virtual machine, and it has its own local files. All of the run
 
 **Run code in a cell** by pressing Ctrl-Enter (Windows) or Cmd-Enter (Apple) or the play button of the cell.
 
-Colab gives access to Gemini artificial intelligence (AI) features such as being able to *generate* code given a natural language prompt, and the *Explain error* button. A very convenient way to use Gemini in Colab is to write a comment in the code and let Gemini write the code below the comment. For this to work, you may need to create a runtime (a normal thing to do when using Colab, see below).
+Colab gives access to Gemini artificial intelligence (AI) features such as *Generate code* button for creating code based on a prompt entered, and the *Explain error* button.
 
-### Changing the used Google account
+### Switching Google account
 
-Profile icon in the right top corner opens a menu where Add account (Lisää tili) option allows to add HAMK Google account if it isn’t already in the list.
+The profile icon in the top right corner opens a menu where you can use the Add account option to sign in with a new account.
 
-<img src="assets/analyzing-data/media/image5.png" style="width:7.31771in;height:2.87876in" />
+<img src="assets/datatalous/media/image6.png" style="width:7.31771in;height:2.87876in" />
 
 ## Python basics part 1
 
-This subsection covers the basics of Python programming, using code examples. Type or copy-paste each code example into a code cell in Colab, and run the cell. Try to understand the result. Modify the code as instructed and run it again.
+This subsection covers the basics of Python programming, using code examples. Type or copy-paste each code example into a code cell in Colab, and run the cell. Try to understand the result. Modify the code as instructed and run it again. You can also create a new cell and write your own code in it.
 
-In Python, you can create your own variables that refer to a value. There are different types of values. We will become familiar with some of those in this section. Depending on what type of value the variable refers to, you have access to different way of using the variable.
+In Python, you can create your own variables. A variable always refers to some value. Values have different types. We will become familiar with some of these types in this section. Depending on the type of value the variable refers to, the variable or rather its value can be used in different ways.
 
-A python program or a code cell is run line-by line from top to bottom by the Python interpreter. If the interpreter encounters an error, the execution will be interrupted and an error message will be shown. The python interpreter remembers the values of any variables from previously run code. To forget all variables, click *Runtime*→*Restart session*. This will not delete local files stored in the runtime.
+The Python interpreter runs a Python program or code cell line by line from top to bottom. If the interpreter encounters an error, execution is halted and an error message is displayed. The Python interpreter remembers the values of all variables from previously executed code. You can delete all created variables by clicking *Runtime*→*Restart*. This will not delete local files saved during execution.
 
 ### Comments, variables, types (numbers, strings), basic math, print
 
@@ -70,17 +74,17 @@ result = x + y
 print(result) # Prints 7.5
 ```
 
-Spaces can be freely added to the code between words to make the code more readable, except at the beginning of each line where they are used to split the code into blocks (to be explained later) in Python.
+In Python, spaces at the beginning of each line are used to divide code into blocks, which will be explored later. Otherwise, spaces can be freely added between code to make the code more readable. Appropriate use of spaces makes code more readable.
 
-The last code line above is an example of calling a function. A function is called by writing comma-separated input values to parentheses after the function name. Functions may return a value. There are many built-in functions and you can also write your own functions.
+The last line is also an example of calling a function, in this case Python's built-in print function. A function is called by writing comma-separated input values to parentheses after the function name. A function may return a value. There are many built-in functions, and you can also write your own functions.
 
 ### Exercise pause during the lecture
 
 **Change the input numbers and see how the result changes.**
 
-**Change the calculation to 1) subtraction and 2) multiplication.** See: [<u>Python operators</u>](https://www.w3schools.com/python/python_operators.asp).
+**Create versions of the code that perform 1) subtraction and 2) multiplication.** See: [<u>Python operators</u>](https://www.w3schools.com/python/python_operators.asp).
 
-**Calculate the square root of a number.** Hint: You can Google how to do it, or ask AI.
+**Calculate the square root of a number.** You can google or ask AI how to do it.
 
 ### Lecture continues
 
@@ -106,7 +110,7 @@ print(sentence)
 
 **Use the second name in the sentence.** Hint: For example resulting in “Our names are Peter and Eva”.
 
-[Exercise 1: Fibonacci numbers](Exercise1.md)
+[Exercise 1](Exercise1.md)
 
 # 2. Lecture 4.11.2026
 

@@ -1,18 +1,20 @@
 Syksy 2026
 
-© 2026 HAMK Hämeen Ammattikorkeakoulu. Tekijät: Olli Koskela, Olli Niemitalo
+© 2026 HAMK Hämeen Ammattikorkeakoulu. Tekijät: Pirita Rantala, Olli Koskela, Olli Niemitalo
 
 # 1. Luento 28.10.2026 Colab, Pythonin perusteet osa 1
 
 ## Python
 
-Python on ohjelmointikieli, joka on erittäin suosittu tietojen analysoinnissa. Tietokoneohjelman kirjoittaminen tietojen analysointia varten on kätevää, koska ohjelma tarvitsee kirjoittaa vain kerran ja sitä voidaan sitten käyttää toistuvasti eri syötedatojen kanssa. Pythonin suosion vuoksi Internetissä on paljon apua, varsinkin englanniksi, ja sitä kannattaa hakea esim. Google-haulla ja tekoäly (AI) -chattien avulla. Pythonin ominaisuuksia voidaan laajentaa käyttämällä *moduuleita*, esimerkiksi taulukkomuotoisen datan käsittelemiseksi tai kuvaajien piirtämiseksi. Moduuleilla on yleensä omat online-dokumentaationsa, joihin voi tutustua.
+Python on ohjelmointikieli, joka on erittäin suosittu tietojen analysoinnissa. Tietokoneohjelman kirjoittaminen tietojen analysointia varten on kätevää, koska ohjelma tarvitsee kirjoittaa vain kerran ja sitä voidaan sitten käyttää toistuvasti eri syötedatojen kanssa. Pythonin ominaisuuksia voidaan laajentaa käyttämällä *moduuleita*, esimerkiksi taulukkomuotoisen datan käsittelemiseksi tai kuvaajien piirtämiseksi. Moduuleilla on yleensä omat online-dokumentaationsa, joihin voi tutustua.
 
-Sinun ei tarvitse muistaa tarkkaan miten mikäkin asia voidaan tehdä Pythonilla. Googlaa rohkeasti tai kysy tekoälyltä! Tyypillisesti monilla ihmisillä on ollut sama ongelma kuin sinulla, ja he ovat pyytäneet apua esim [<u>Stack Overflow</u>](https://stackoverflow.com/) -palvelussa, joka on ilmainen kysymys- ja vastauspalvelu. Joskus riittää, että virheilmoitusta käytetään hakuavaimena tai promptina AI:lle.
+Pythonin suosion vuoksi tekoälytyökalut tuntevat sen hyvin ja apua sen käyttöön kannattaa hakea tekoäly (AI) -chattien avulla. Viimeisen vuoden aikana modernimpi AI:n hyödyntämisen tapa, itsenäisesti ohjelmaa kehittävien AI-agenttien käyttäminen, on noussut chatteja tehokkaammaksi. Agentit pystyvät luomaan lähdekooditiedostoja, ajamaan niitä, testaamaan ohjelman toimintaa ja korjaamaan bugeja. Agenttiominaisuuksia voi olla tarjolla myös AI-chateissa.
 
-Tekoälytyökalut voivat auttaa sinua ja voit käyttää niitä vapaasti tällä kurssilla koodin luomiseen. Sinulle on luultavasti tärkeämpää "saada homma hoidettua" kuin opiskella Python-kieli juurta jaksain. Tekoälyä voi ajatella apulaisena, joka kirjoittaa koodia puolestasi. Seuraavassa osiossa tutustutaan Google Gemini -tekoäyn käyttöön. Muita hyödyllisiä tekoälyjä Python-koodin kirjoittamiseen ovat mm. ChatGPT, Gemini, Copilot, Grok, Manus, ja Claude. Niiden käyttö vähäisissä määrin on ilmaista ja yhä useammat niistä pystyvät myös itse ajamaan ja testaamaan koodia.
+Jotta AI osaisi auttaa sinua parhaan kykynsä mukaan, sille kannattaa "promptissa" kertoa ratkaistava ongelma ja että mitä ajatuksia sinulla on ratkaisun suhteen ja kuinka varma olet niistä tai haluatko että AI itse valitsee ratkaisun menetelmiä. Jos ohjelman suorituksessa tapahtuu virhe, virheilmoitus sellaisenaan on AI:lle käyttökelpoista tietoa virheen selvittämiseen ja se kannattaa antaa sille.
 
-Jos olet aikeissa lähettää tekoälylle tietoa, joka on salassa pidettävää tai yksityistä, varmista palvelun käyttöehdoista ja tietosuojakäytännöistä miten lähettämääsi dataa käytetään. Harkitse myös luotatko palvelun tarjoajaan.
+Tekoälytyökalut voivat auttaa sinua ja voit käyttää niitä vapaasti tällä kurssilla koodin luomiseen. Sinulle on luultavasti tärkeämpää "saada homma hoidettua" kuin opiskella Python-kieli juurta jaksain. Tekoälyä voi ajatella apulaisena, joka kirjoittaa koodia puolestasi. Seuraavassa osiossa tutustutaan Google Gemini -tekoäyn käyttöön. Muita hyödyllisiä tekoälyjä Python-koodin kirjoittamiseen ovat mm.: ChatGPT, Gemini, Copilot, Mistral, Grok, Manus, ja Claude. Niiden käyttö vähäisissä määrin on ilmaista ja yhä useammat niistä pystyvät myös itse ajamaan ja testaamaan koodia. Kun krediitit loppuvat yhdessä palvelussa voi vaihtaa toiseen.
+
+Jos olet aikeissa lähettää tekoälylle tietoa, joka on salassa pidettävää tai yksityistä, varmista että sinulla on lupa siihen. Voit joutua tarkistamaan tekoälypalvelun käyttöehdoista ja tietosuojakäytännöistä miten lähettämääsi dataa käytetään. Harkitse myös luotatko palvelun tarjoajaan.
 
 ## Colab
 
