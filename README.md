@@ -1,4 +1,4 @@
-## Programmatic data analysis lecture notes<br>Ohjelmallisen data-analyysin luentomuistiinpanot
+## Lecture notes / Luentomuistiinpanot
 
 - [Exploiting agricultural data - Programmatic data analysis (English)](2026/Lectures.md)
 - [Maatalouden datan hyödyntäminen - Ohjelmallinen data-analyysi (Finnish)](2026/Luennot.md)
