@@ -5,7 +5,7 @@ Syksy 2026
 # 1. Luento 28.10.2026
 <!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta! Lisää lyhyt kuvaus alle! -->
 
-Tällä luennolla käydään läpi Colab ja Pythonin perusteet osa 1.
+Tällä luennolla käydään läpi Colab, AI:n käyttö ja Pythonin perusteet osa 1.
 
 ### Python
 
@@ -146,7 +146,7 @@ print(sentence)
 
 (Ei uutta viikkotehtävää)
 
-# Luentojen jälkeen
+# Luentosarjan jälkeen
 
 Raporttien purkutilaisuus on 15.12.2026. Pyrkikää hyödyntämään esityksessä ja raportissa ohjelmallisen data-analyysin osuudessa saamianne taitoja. Voitte esim. hankkia ja yhdistää ulkopuolista dataa projektidataan ja analysoida niitä yhdessä, käyttäen Pythonia haluamissanne työvaiheissa.
 
