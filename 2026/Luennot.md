@@ -2,9 +2,10 @@ Syksy 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Tekijät: Pirita Rantala, Olli Koskela, Olli Niemitalo
 
-# 1. Luento 28.10.2026 Colab, Pythonin perusteet osa 1
+# 1. Luento 28.10.2026 <!-- This is a hidden comment -->
+Tällä luennolla käydään läpi Colab ja Pythonin perusteet osa 1.
 
-## Python
+### Python
 
 Python on ohjelmointikieli, joka on erittäin suosittu tietojen analysoinnissa. Tietokoneohjelman kirjoittaminen tietojen analysointia varten on kätevää, koska ohjelma tarvitsee kirjoittaa vain kerran ja sitä voidaan sitten käyttää toistuvasti eri syötedatojen kanssa. Pythonin ominaisuuksia voidaan laajentaa käyttämällä *moduuleita*, esimerkiksi taulukkomuotoisen datan käsittelemiseksi tai kuvaajien piirtämiseksi. Moduuleilla on yleensä omat online-dokumentaationsa, joihin voi tutustua.
 
@@ -110,30 +111,30 @@ print(sentence)
 
 **Lisää uusi nimi lauseeseen uutta muuttujaa käyttäen.** Lopputuloksena esim. “Meidän nimemme ovat Petri ja Eeva”.
 
-[Harjoitus 1: Fibonaccin luvut](Harjoitus1.md)
+[Viikkotehtävä 1: Fibonaccin luvut](Harjoitus1.md)
 
 # 2. Luento 4.11.2026
 
-[Harjoitus 2](Harjoitus2.md)
+[Viikkotehtävä 2](Harjoitus2.md)
 
 # 3. Luento 11.11.2026
 
-[Harjoitus 3](Harjoitus3.md)
+[Viikkotehtävä 3](Harjoitus3.md)
 
 # 4. Luento 18.11.2026
 
-[Harjoitus 4](Harjoitus4.md)
+[Viikkotehtävä 4](Harjoitus4.md)
 
 # 5. Luento 25.11.2026
 
-[Harjoitus 5](Harjoitus5.md)
+[Viikkotehtävä 5](Harjoitus5.md)
 
 # 6. Luento 2.12.2026
 
-[Harjoitus 6](Harjoitus6.md)
+[Viikkotehtävä 6](Harjoitus6.md)
 
 # 7. Luento 9.12.2026
 
-(Ei harjoitusta)
+(Ei uutta viikkotehtävää)
 
 Raporttien purkutilaisuus on 15.12.2026. Pyrkikää hyödyntämään esityksessä ja raportissa ohjelmallisen data-analyysin osuudessa saamianne taitoja. Voitte esim. hankkia ja yhdistää ulkopuolista dataa projektidataan ja analysoida niitä yhdessä, käyttäen Pythonia haluamissanne työvaiheissa.
