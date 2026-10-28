@@ -1,6 +1,7 @@
-# Exercise 1
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Harjoitus1.md as of commit e01f6b51c997b0d8fe076be19c049a447881c962. To catch up, translate the changes shown by: git diff e01f6b51c997b0d8fe076be19c049a447881c962 HEAD -- 2026/Harjoitus1.md (then update the commit hash here). -->
+# Weekly exercise 1
 
-Lecture date: 28.10.2026
+Given in the [lecture on 28.10.2026](Lectures.md#1-lecture-28102026)
 
 ## Task
 Copy the code below into a single code cell in a Colab Python Notebook and complete the missing parts according to the instructions. Print the completed exercise to a PDF file and return it to Moodle.

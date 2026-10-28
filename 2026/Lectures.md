@@ -1,10 +1,14 @@
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit e01f6b51c997b0d8fe076be19c049a447881c962. To catch up, translate the changes shown by: git diff e01f6b51c997b0d8fe076be19c049a447881c962 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
 Autumn 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
 
-# 1. Lecture 28.10.2026 Colab, Python basics part 1
+# 1. Lecture 28.10.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-## Python
+This lecture covers Colab, the use of AI, and Python basics part 1.
+
+### Python
 
 Python is a programming language that is very popular for data analysis. Writing a program for data analysis is convenient because a program only needs to be written once and can then be used repeatedly with different input data. The capabilities of Python can be extended using *modules*, for example in order to easily manipulate tabular data or for plotting, etc. Modules typically have their own online documentation that can be consulted.
 
@@ -110,30 +114,40 @@ print(sentence)
 
 **Use the second name in the sentence.** Hint: For example resulting in “Our names are Peter and Eva”.
 
-[Exercise 1](Exercise1.md)
+[Weekly exercise 1](Exercise1.md)
 
 # 2. Lecture 4.11.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-[Exercise 2](Exercise2.md)
+[Weekly exercise 2](Exercise2.md)
 
 # 3. Lecture 11.11.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-[Exercise 3](Exercise3.md)
+[Weekly exercise 3](Exercise3.md)
 
 # 4. Lecture 18.11.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-[Exercise 4](Exercise4.md)
+[Weekly exercise 4](Exercise4.md)
 
 # 5. Lecture 25.11.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-[Exercise 5](Exercise5.md)
+[Weekly exercise 5](Exercise5.md)
 
 # 6. Lecture 2.12.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-[Exercise 6](Exercise6.md)
+[Weekly exercise 6](Exercise6.md)
 
 # 7. Lecture 9.12.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-(No exercise)
+(No new weekly exercise)
+
+# After the lecture series
 
 The report presentations session is on 15.12.2026. Try to utilize the programmatic data analysis skills you've gained in your presentation and report. For example, you can acquire and merge external data into your project data and analyze them together, using Python in whatever work stages you want.
+
+The exam will include questions about the weekly exercises.

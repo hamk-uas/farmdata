@@ -1,8 +1,7 @@
-# Exercise 2
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Harjoitus2.md as of commit e01f6b51c997b0d8fe076be19c049a447881c962. To catch up, translate the changes shown by: git diff e01f6b51c997b0d8fe076be19c049a447881c962 HEAD -- 2026/Harjoitus2.md (then update the commit hash here). -->
+# Weekly exercise 2
 
-Lecture date: 4.11.2026
-
-[Back to lecture notes](Lectures.md)
+Given in the [lecture on 4.11.2026](Lectures.md#2-lecture-4112026).
 
 The purpose of this exercise is to visualize growing seasons using graphs of cumulative temperature and precipitation sums. These graphs illustrate how weather conditions accumulate in the field over time during the growing season. A growing season is defined as a continuous period during which the daily mean temperature remains above +5°C.
 

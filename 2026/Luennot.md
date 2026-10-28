@@ -113,7 +113,7 @@ print(sentence)
 
 **Lisää uusi nimi lauseeseen uutta muuttujaa käyttäen.** Lopputuloksena esim. “Meidän nimemme ovat Petri ja Eeva”.
 
-[Viikkotehtävä 1: Fibonaccin luvut](Harjoitus1.md)
+[Viikkotehtävä 1](Harjoitus1.md)
 
 # 2. Luento 4.11.2026
 <!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta! Lisää lyhyt kuvaus alle! -->
