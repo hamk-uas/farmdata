@@ -1,5 +1,3 @@
-# Harjoitus 3
+# Viikkotehtävä 3
 
-Luennon päivämäärä: 11.11.2026
-
-[Takaisin luentomuistiinpanoihin](Luennot.md)
+Annettu [Luennot.md#1-luento-28102026](luennolla 11.11.2026)
