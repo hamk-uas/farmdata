@@ -15,7 +15,7 @@ Pythonin suosion vuoksi tekoälytyökalut tuntevat sen hyvin ja apua sen käytt�
 
 Jotta AI osaisi auttaa sinua parhaan kykynsä mukaan, sille kannattaa "promptissa" kertoa ratkaistava ongelma ja että mitä ajatuksia sinulla on ratkaisun suhteen ja kuinka varma olet niistä tai haluatko että AI itse valitsee ratkaisun menetelmiä. Jos ohjelman suorituksessa tapahtuu virhe, virheilmoitus sellaisenaan on AI:lle käyttökelpoista tietoa virheen selvittämiseen ja se kannattaa antaa sille.
 
-Tekoälytyökalut voivat auttaa sinua ja voit käyttää niitä vapaasti tällä kurssilla koodin luomiseen. Sinulle on luultavasti tärkeämpää "saada homma hoidettua" kuin opiskella Python-kieli juurta jaksain. Tekoälyä voi ajatella apulaisena, joka kirjoittaa koodia puolestasi. Seuraavassa osiossa tutustutaan Google Gemini -tekoäyn käyttöön. Muita hyödyllisiä tekoälyjä Python-koodin kirjoittamiseen ovat mm.: ChatGPT, Gemini, Copilot, Mistral, Grok, Manus, ja Claude. Niiden käyttö vähäisissä määrin on ilmaista ja yhä useammat niistä pystyvät myös itse ajamaan ja testaamaan koodia. Kun krediitit loppuvat yhdessä palvelussa voi vaihtaa toiseen.
+Tekoälytyökalut voivat auttaa sinua ja voit käyttää niitä vapaasti tällä kurssilla koodin luomiseen. Sinulle on luultavasti tärkeämpää "saada homma hoidettua" kuin opiskella Python-kieli juurta jaksain. Tekoälyä voi ajatella apulaisena, joka kirjoittaa koodia puolestasi. Seuraavassa osiossa tutustutaan Google Gemini -tekoäyn käyttöön. Muita hyödyllisiä tekoälyjä Python-koodin kirjoittamiseen ovat mm.: ChatGPT, Gemini, Copilot, Mistral, Grok, Deepseek, Manus, ja Claude. Niiden käyttö vähäisissä määrin on ilmaista ja yhä useammat niistä pystyvät myös itse ajamaan ja testaamaan koodia. Kun krediitit loppuvat yhdessä palvelussa voi vaihtaa toiseen.
 
 Jos olet aikeissa lähettää tekoälylle tietoa, joka on salassa pidettävää tai yksityistä, varmista että sinulla on lupa siihen. Voit joutua tarkistamaan tekoälypalvelun käyttöehdoista ja tietosuojakäytännöistä miten lähettämääsi dataa käytetään. Harkitse myös luotatko palvelun tarjoajaan.
 
@@ -385,7 +385,7 @@ Colabin Gemini-tekoäly osaa kirjoittaa datan käsittelyyn ja kuvaajien piirtäm
 1. **Lue koodi ja tarkista, onko tulos järkevä.** Esimerkiksi heinäkuun keskilämpötilan pitäisi olla noin +15–20 °C. Jos et ymmärrä jotain kohtaa, pyydä tekoälyä selittämään se.
 1. **Jos tulee virhe**, paina *Explain error* tai kopioi virheilmoitus tekoälylle.
 
-Colabin Geminin ilmainen käyttö on rajoitettua. Jos käyttökerrat tai krediitit loppuvat, voit käyttää muita tekoälyjä, kuten ChatGPT:tä, Copilotia, Claudea tai Mistralia. Ne eivät näe notebookiasi, joten kerro promptissa kaikki tarvittava: muuttujien ja sarakkeiden nimet, oma koodisi ja virheilmoitukset kokonaisuudessaan. Kopioi saamasi koodi Colabin koodisoluun.
+Colabin Geminin ilmainen käyttö on rajoitettua. Jos käyttökerrat tai krediitit loppuvat, voit käyttää muita tekoälyjä, kuten ChatGPT:tä, Copilotia, Claudea, Mistralia tai Deepseekiä. Ne eivät näe notebookiasi, joten kerro promptissa kaikki tarvittava: muuttujien ja sarakkeiden nimet, oma koodisi ja virheilmoitukset kokonaisuudessaan. Kopioi saamasi koodi Colabin koodisoluun.
 
 Esimerkki promptista:
 
