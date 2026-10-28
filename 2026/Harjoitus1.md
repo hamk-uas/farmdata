@@ -1,4 +1,4 @@
-# Harjoitus 1
+# Viikkotehtävä 1
 
 Luennon päivämäärä: 28.10.2026
 
