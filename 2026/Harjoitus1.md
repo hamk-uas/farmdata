@@ -1,6 +1,6 @@
 # Viikkotehtävä 1
 
-Luennon päivämäärä: 28.10.2026
+Annettu [luennolla 28.10.2026](Luennot.md#1-luento-28102026)
 
 ## Tehtävä
 Kopio alla oleva koodi yhteen ohjelmasoluun Colabin Python Notebookissa ja täydennä ohjeiden mukaan puuttuvat kohdat. Tee tiedostosta lopuksi PDF-tuloste ja palauta se Moodleen.
