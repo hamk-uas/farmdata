@@ -1,4 +1,4 @@
-# Harjoitus 2
+# Viikkotehtävä 2
 
 Luennon päivämäärä: 4.11.2026
 
