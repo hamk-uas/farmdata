@@ -2,7 +2,9 @@ Syksy 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Tekijät: Pirita Rantala, Olli Koskela, Olli Niemitalo
 
-# 1. Luento 28.10.2026 <!-- This is a hidden comment -->
+# 1. Luento 28.10.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta! Lisää lyhyt kuvaus alle! -->
+
 Tällä luennolla käydään läpi Colab ja Pythonin perusteet osa 1.
 
 ### Python
@@ -114,27 +116,38 @@ print(sentence)
 [Viikkotehtävä 1: Fibonaccin luvut](Harjoitus1.md)
 
 # 2. Luento 4.11.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta! Lisää lyhyt kuvaus alle! -->
 
 [Viikkotehtävä 2](Harjoitus2.md)
 
 # 3. Luento 11.11.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
+
 
 [Viikkotehtävä 3](Harjoitus3.md)
 
 # 4. Luento 18.11.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
 
 [Viikkotehtävä 4](Harjoitus4.md)
 
 # 5. Luento 25.11.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
 
 [Viikkotehtävä 5](Harjoitus5.md)
 
 # 6. Luento 2.12.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
 
 [Viikkotehtävä 6](Harjoitus6.md)
 
 # 7. Luento 9.12.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
 
 (Ei uutta viikkotehtävää)
 
+# Luentojen jälkeen
+
 Raporttien purkutilaisuus on 15.12.2026. Pyrkikää hyödyntämään esityksessä ja raportissa ohjelmallisen data-analyysin osuudessa saamianne taitoja. Voitte esim. hankkia ja yhdistää ulkopuolista dataa projektidataan ja analysoida niitä yhdessä, käyttäen Pythonia haluamissanne työvaiheissa.
+
+Tenttiin tulee kysymyksiä viikkotehtävistä.
