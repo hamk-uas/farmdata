@@ -1,6 +1,6 @@
 # Viikkotehtävä 2
 
-Annettu [Luennot.md#2-luento-4112026](luennolla 4.11.2026).
+Annettu [luennolla 4.11.2026](Luennot.md#2-luento-4112026).
 
 Tehtävässä on tarkoitus havainnoillistaa kasvukausia käyttämällä niitä kuvaavia graafeja lämpötilan ja sademäärien kumulatiivisista summista. Nämä kuvaajat havainnollistavat kasvien kokeman sääolosuhteen kertymistä pellolla eri aikoina kasvukautta. Kasvukausi määritellään yhtenäiseksi ajanjaksoksi, jona vuorokauden keskilämpötila pysyy yli +5°C.
 
