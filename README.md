@@ -42,9 +42,5 @@ To include an image in a Markdown file, use the following syntax:
 
 3. **For files in nested subdirectories, use `../` to go up:**
    ```markdown
-
-### Deep links
-
-
    ![Example](../assets/analyzing-data/media/image5.png)
    ```
