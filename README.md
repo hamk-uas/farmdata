@@ -6,9 +6,17 @@
 Lecture notes link to weekly exercises.\
 Luentomateriaaleissa on linkit viikkotehtäviin.
 
-## For teachers: Adding images to Markdown
+## For teachers
 
-Store images in organized subdirectories under `2026/assets/`. Supported formats: PNG, JPG, GIF, SVG.
+### Linking documents
+
+You can link from one Markdown file to another. GitHub also enables deeplinking to section headings, and this works both for linking from Moodle to a section as well as for linking between Markdown files. You might want to keep the section headings simple so that they do not need to be modified, and give detail the text.
+
+You can obtain the deep links from GitHub by pointing at the heading, and obtaining the deep-link by right-clicking the chain icon on its left side and by copying the link. The link is of form like `https://github.com/hamk-uas/farmdata/blob/main/2026/Luennot.md#1-luento-28102026`. If you link from another Markdown file in the same folder, you can use a relative link `Luennot.md#1-luento-28102026`. Relative links are better in the sense that even if the repository is moved or renamed, the links continue to work. You can also link to a subfolder, for example the repo's README (the current file) would use the relative link `2026/Luennot.md#1-luento-28102026`. Linking through a parent folder document would work as `../2026/Luennot.md#1-luento-28102026`, for example to link to the previous year's lecture notes in 2027.
+
+### Adding images to Markdown
+
+Store images in organized subdirectories under `2026/assets/` or in the current year's equivalent folder. Supported formats: PNG, JPG, GIF, SVG.
 
 To include an image in a Markdown file, use the following syntax:
 
@@ -34,5 +42,9 @@ To include an image in a Markdown file, use the following syntax:
 
 3. **For files in nested subdirectories, use `../` to go up:**
    ```markdown
+
+### Deep links
+
+
    ![Example](../assets/analyzing-data/media/image5.png)
    ```
