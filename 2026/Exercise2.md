@@ -1,4 +1,4 @@
-<!-- Translation sync: this file is up to date with the Finnish source 2026/Harjoitus2.md as of commit e01f6b51c997b0d8fe076be19c049a447881c962. To catch up, translate the changes shown by: git diff e01f6b51c997b0d8fe076be19c049a447881c962 HEAD -- 2026/Harjoitus2.md (then update the commit hash here). -->
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Harjoitus2.md as of commit 80080b5696ee64becb99e488730d36c80ea93424. To catch up, translate the changes shown by: git diff 80080b5696ee64becb99e488730d36c80ea93424 HEAD -- 2026/Harjoitus2.md (then update the commit hash here). -->
 # Weekly exercise 2
 
 Given in the [lecture on 4.11.2026](Lectures.md#2-lecture-4112026).
