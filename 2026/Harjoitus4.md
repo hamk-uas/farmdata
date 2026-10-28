@@ -1,5 +1,3 @@
 # Harjoitus 4
 
-Luennon päivämäärä: 18.11.2026
-
-[Takaisin luentomuistiinpanoihin](Luennot.md)
+Annettu [luennolla 18.11.2026](https://github.com/hamk-uas/farmdata/blob/main/2026/Luennot.md#4-luento-18112026).
