@@ -1,4 +1,4 @@
-<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 80080b5696ee64becb99e488730d36c80ea93424. To catch up, translate the changes shown by: git diff 80080b5696ee64becb99e488730d36c80ea93424 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 46c89f3dfcc6266c31611e98eab40bd8336088a1. To catch up, translate the changes shown by: git diff 46c89f3dfcc6266c31611e98eab40bd8336088a1 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
 Autumn 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
@@ -118,6 +118,310 @@ print(sentence)
 
 # 2. Lecture 4.11.2026
 <!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
+
+In this lecture we make sure everyone can return the weekly exercise as a PDF, revise Python basics (program flow, variables and conditional statements), and start processing weather data and plotting it with the help of AI. These skills are needed in weekly exercise 2.
+
+## Returning the weekly exercise as a PDF
+
+At the start of the lecture we make sure that everyone has managed to make a PDF file of their weekly exercise 1 notebook for returning in Moodle. All weekly exercises are returned the same way.
+
+1. Run all cells of the notebook by selecting *Runtime*→*Run all*. Check that the outputs and plots are visible and that there are no error messages under the cells.
+1. Select *File*→*Print* or press Ctrl+P (Mac: Cmd+P).
+1. In the browser's print dialog, choose saving to a PDF file as the printer. The name of the option depends on the browser and operating system, but it usually contains the word PDF, for example *Save as PDF* or *Microsoft Print to PDF*. In the Mac print dialog, saving as PDF is found in the *PDF* menu.
+1. Open the saved PDF and check that all cells, outputs and plots are included. If long code lines are cut off, try landscape orientation or a smaller scale. If printing does not work at all, try another browser.
+1. Return the PDF file in Moodle.
+
+## Using notebooks
+
+Practice these operations during the exercise pauses of the lecture, so that they become routine.
+
+| Operation | How |
+|---|---|
+| New notebook | *File*→*New notebook in Drive* |
+| New code or text cell | *+ Code* or *+ Text* button |
+| Running a cell | The cell's play button or Ctrl+Enter (Mac: Cmd+Enter) |
+| Moving or deleting a cell | The arrow and trash can buttons in the top right corner of the cell |
+| Running all cells from top to bottom | *Runtime*→*Run all* |
+| Clearing variables and running all cells | *Runtime*→*Restart session and run all* |
+| A completely new runtime | *Runtime*→*Disconnect and delete runtime*, then run any cell or *Run all* |
+
+*Run all* stops at the first cell that causes an error. Fix or delete the cell causing the error and run again.
+
+## Python basics part 2
+
+The goal is not to learn Python by heart, but to understand how a program proceeds and what happens to variables. Then you can also read and check code written by AI and modify it for your own needs.
+
+**Create a new notebook for this lecture** and copy each example into its own code cell.
+
+### A program runs line by line from top to bottom
+
+```python
+# Morning temperature
+temperature = 4
+print("In the morning:", temperature)
+
+# A new value is assigned to the variable, and the old value is forgotten
+temperature = 15
+print("During the day:", temperature)
+
+# A new value can be calculated from the old value
+temperature = temperature - 6
+print("In the evening:", temperature)
+```
+
+The value of a variable is always the value that was most recently assigned to it. The equals sign `=` does not mean mathematical equality but *assignment*: first the value of the right-hand side is calculated, and then it is stored in the variable on the left. That is why the line `temperature = temperature - 6` calculates a new value from the old value (15 − 6 = 9) and stores it in the same variable.
+
+**Before running it, think about what the following code prints:**
+
+```python
+a = 3
+b = a + 2
+a = 10
+print(a, b)
+```
+
+<details>
+<summary>Answer</summary>
+
+The code prints `10 5`. The value of `b` is calculated on the second line, when `a` is still 3. When a new value is later assigned to `a`, `b` does not change.
+
+</details>
+
+### Cumulative sum
+
+By updating a variable, we can calculate for example the *cumulative sum* of precipitation: for each day, the sum of all precipitation up to and including that day. Cumulative sums are used in [weekly exercise 2](Exercise2.md).
+
+```python
+# The cumulative sum is zero at first
+total_rain = 0
+
+total_rain = total_rain + 2.5   # Day 1: 2.5 mm of rain
+print("Day 1:", total_rain)
+
+total_rain = total_rain + 0.0   # Day 2: no rain
+print("Day 2:", total_rain)
+
+total_rain = total_rain + 6.1   # Day 3: 6.1 mm of rain
+print("Day 3:", total_rain)
+```
+
+### The order in which cells are run
+
+```python
+print(rainfall)
+rainfall = 3.2
+```
+
+The code causes the error `NameError: name 'rainfall' is not defined`, because the first line is run before the variable has been given a value. With the *Explain error* button under the error message you can ask Gemini to explain the error.
+
+In Colab, variables persist from one cell to another, and cells are run in the order in which you run them. If you change a cell higher up, also rerun the cells that use it, or run all cells from top to bottom by selecting *Runtime*→*Run all*.
+
+### Exercise pause during the lecture
+
+**Add a fourth day to the cumulative sum example**, with 1.4 mm of rain.
+
+**Add text cells above the examples** and write a short heading in each, for example `# Cumulative sum`. In a text cell, a `#` at the beginning of a line turns the line into a heading, which is shown in the table of contents on the left.
+
+**Select *Runtime*→*Restart session and run all*.** Execution stops at the `NameError` example. Fix or delete that cell and try again until all cells run through.
+
+### Lecture continues
+
+### Conditional statements: if, elif and else
+
+A comparison such as `temperature > 5` produces a *boolean value* `True` or `False`. With a *conditional statement* (if statement), a program can choose based on data which lines are run. During the growing season, the daily mean temperature is above +5 °C:
+
+```python
+temperature = 7.3
+
+if temperature > 5:
+    print("The mean temperature is above +5 °C.")
+    print("Plants are growing.")
+else:
+    print("The mean temperature is +5 °C or below.")
+    print("Growth has stopped.")
+
+print("Check done")
+```
+
+- The `if` line ends with a colon `:`.
+- Indented lines form a *block*. The `if` block is run only if the condition is true, and the `else` block otherwise. The `else` part is optional.
+- The non-indented line `print("Check done")` is always run.
+
+The comparison operators are `==` (equal to), `!=` (not equal to), `<`, `>`, `<=` and `>=`. Note the difference: `=` assigns a value to a variable, whereas `==` compares two values. Conditions can be combined with `and` (both true) and `or` (at least one true).
+
+There can be more than two alternatives. The conditions are checked from top to bottom, and only the block of the first condition that is true is run:
+
+```python
+temperature = -2
+
+if temperature < 0:
+    print("Below freezing")
+elif temperature <= 5:
+    print("Cool, growth does not start yet")
+else:
+    print("Warm enough for growth")
+```
+
+### Exercise pause during the lecture
+
+**Change the temperature so that each of the three alternatives is printed in turn.** Before running, think about what will be printed. What is printed when the temperature is exactly 5?
+
+**Write a conditional statement that prints "Heavy rain" if the value of the variable `rain` is more than 10 mm, and otherwise "Little or no rain".**
+
+## Data processing and plots
+
+### Plotting: matplotlib.pyplot.plot()
+
+Plots are drawn with the pyplot module of the matplotlib library, which is imported with the abbreviation `plt`. The function [`plt.plot()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) draws a line plot: first you give the x-axis values and then the y-axis values. You can draw several curves in the same plot by calling the function several times.
+
+```python
+import matplotlib.pyplot as plt
+
+# A list contains several values in order, inside square brackets
+days = [1, 2, 3, 4, 5, 6, 7]
+temperatures_jokioinen = [6.1, 7.4, 5.2, 8.9, 10.3, 9.5, 11.0]
+temperatures_seinajoki = [4.8, 6.0, 4.1, 7.5, 9.2, 8.8, 9.9]
+
+# "o-" draws the points as circles and connects them with a line, label names the curve
+plt.plot(days, temperatures_jokioinen, "o-", label="Jokioinen")
+plt.plot(days, temperatures_seinajoki, "o-", label="Seinäjoki")
+plt.xlabel("Day")
+plt.ylabel("Mean temperature [°C]")
+plt.title("Mean temperatures of the week")
+plt.legend()  # Legend showing the names of the curves
+plt.show()
+```
+
+### Exercise pause during the lecture
+
+**Plot the cumulative precipitation from the cumulative sum example** by writing the days and the cumulative sums into lists.
+
+### Lecture continues
+
+### Reading weather data
+
+The following code reads hourly weather observations of the Finnish Meteorological Institute from the Ilmala, Jokioinen or the Pelmaa, Seinäjoki weather station. The same data are used in weekly exercise 2. The file to read is chosen with a conditional statement based on the variable `station`. The data are read into a pandas *DataFrame* table `df`, in which each row is the observation of one hour.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Choose the weather station: "Jokioinen" or "Seinäjoki"
+station = "Jokioinen"
+
+if station == "Jokioinen":
+    file_path = 'https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Jokioinen%20Ilmala_%201.1.2020%20-%2027.10.2026.csv'
+elif station == "Seinäjoki":
+    file_path = 'https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Sein%C3%A4joki%20Pelmaa_%201.1.2020%20-%2027.10.2026.csv'
+else:
+    # raise stops the program and shows our own error message
+    raise ValueError(f"Unknown weather station: {station}")
+
+# Missing observations in the data are marked with a dash "-".
+# na_values="-" tells pandas that a dash means a missing value.
+df = pd.read_csv(file_path, na_values="-")
+
+# Clean extra quotation marks and spaces from the column names
+df.columns = df.columns.str.replace('"', '').str.strip()
+
+display(df.head())
+print(df.columns)
+```
+
+Without the `na_values="-"` setting, pandas would interpret the temperature and precipitation columns as strings, and they could not be used in calculations. Pandas marks missing values as `NaN` (*not a number*) and skips them for example when calculating a mean. Almost all measurement data contain missing values, so it is a good idea to check them.
+
+A column is selected by writing its name in square brackets. Pandas can directly calculate for example the mean and the cumulative sum (`cumsum()`) of a column. `cumsum()` does the same as the earlier cumulative sum example, but for every row:
+
+```python
+print("Missing values per column:")
+print(df.isna().sum())
+
+print("Mean temperature over the whole period:", df["Average temperature [°C]"].mean())
+
+rain_cumulative = df["Precipitation [mm]"].cumsum()
+print("Cumulative precipitation, last rows:")
+print(rain_cumulative.tail())
+```
+
+### Selecting rows with a condition
+
+When a column is compared to a value, you get a boolean value for each row separately. It can be used to select the rows of the table for which the condition is true:
+
+```python
+is_warm = df["Average temperature [°C]"] > 5
+print(is_warm.head())
+
+# Select the rows of one day and plot its hourly temperatures
+one_day = df[(df["Year"] == 2025) & (df["Month"] == 7) & (df["Day"] == 15)]
+
+plt.plot(one_day["Time [Local time]"], one_day["Average temperature [°C]"], "o-")
+plt.xticks(rotation=90)  # Rotate the x-axis times to vertical
+plt.xlabel("Time of day")
+plt.ylabel("Temperature [°C]")
+plt.title(f"{station} 15.7.2025")  # Formatted string, see lecture 1
+plt.show()
+```
+
+In pandas conditions, `&` is used instead of `and` and `|` instead of `or`, and each condition is written in parentheses. You do not need to remember details like these, because AI knows them. It is enough that you understand what the code does.
+
+Over a longer period, the times on the x-axis would repeat and you could not see the date. In weekly exercise 2, the columns Year, Month, Day and Time are combined into a single timestamp, which gives dates on the x-axis.
+
+### Exercise pause during the lecture
+
+**Switch the weather station.** Change to `station = "Seinäjoki"` and select *Runtime*→*Run all*. The same code now calculates and plots the results for Seinäjoki. Which station was warmer on 15.7.2025?
+
+**Misspell the station name** and run the cell. What happens?
+
+**Start with a completely new runtime:** *Runtime*→*Disconnect and delete runtime* and then *Runtime*→*Run all*. Because everything needed is in the notebook, it also works when starting from scratch.
+
+### Lecture continues
+
+### Processing data with the help of AI
+
+Colab's Gemini AI can write the code needed for processing data and drawing plots. You can use Gemini for example through the *Generate* link of an empty code cell or through the Gemini button of the Colab window. To get good results:
+
+1. **First run the code that reads the data**, and in the prompt, give the names of the DataFrame, the variables and the columns exactly.
+1. **Say what you want to calculate and how the result should be presented**, for example as a plot drawn with the `plt.plot()` function, with axis labels.
+1. **Proceed in small steps**, one thing and one code cell at a time.
+1. **Read the code and check whether the result makes sense.** For example, the mean temperature of July should be about +15–20 °C. If you do not understand something, ask the AI to explain it.
+1. **If you get an error**, press *Explain error* or copy the error message to the AI.
+
+Free use of Colab's Gemini is limited. If you run out of uses or credits, you can use other AI tools, such as ChatGPT, Copilot, Claude, Mistral or Deepseek. They cannot see your notebook, so give everything needed in the prompt: the names of the variables and columns, your own code and any error messages in full. Copy the code you get into a Colab code cell.
+
+Example prompt:
+
+> The DataFrame `df` contains hourly weather observations of a weather station, and the variable `station` contains the name of the weather station. The columns are "Year", "Month", "Day", "Time [Local time]", "Average temperature [°C]", "Precipitation [mm]" and "Average air pressure [hPa]". Calculate the mean temperature and the precipitation sum of each month of 2025 and show them as a table. Plot the mean temperatures with the matplotlib.pyplot.plot function so that the month number is on the x-axis. Add axis labels, and the name of the weather station to the plot title.
+
+The AI answers a bit differently every time, but the result may look for example like this:
+
+```python
+# Select the rows of 2025
+df_2025 = df[df["Year"] == 2025]
+
+# Group the rows by month and calculate for each month
+# the mean of the temperatures and the sum of the precipitation
+monthly = df_2025.groupby("Month").agg({
+    "Average temperature [°C]": "mean",
+    "Precipitation [mm]": "sum"
+})
+display(monthly)
+
+plt.plot(monthly.index, monthly["Average temperature [°C]"], "o-")
+plt.xlabel("Month")
+plt.ylabel("Mean temperature [°C]")
+plt.title(f"{station}, monthly mean temperatures 2025")
+plt.show()
+```
+
+The function `groupby()` divides the rows into groups, here by month, and `agg()` calculates the desired statistics for each group. In the same way, the daily means and sums needed in weekly exercise 2 can be calculated from the hourly observations.
+
+### Exercise pause during the lecture
+
+**Ask the AI to plot the monthly precipitation of 2025.** Does the total precipitation of the year make sense? In Finland, the annual precipitation is typically about 500–700 mm.
+
+**Switch the weather station and run all cells.** The code produced by the AI also works for the other station as such: a program is written once and can be used with different data.
+
+**Make a PDF file of this notebook** and check that the plots are visible in it.
 
 [Weekly exercise 2](Exercise2.md)
 
