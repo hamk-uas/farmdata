@@ -118,7 +118,7 @@ print(sentence)
 # 2. Luento 4.11.2026
 <!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta! Lisää lyhyt kuvaus alle! -->
 
-Tällä luennolla varmistetaan viikkotehtävän PDF-palautus, kerrataan Pythonin perusteita (ohjelman eteneminen, muuttujat ja ehtolauseet) ja aloitetaan säädatan käsittely ja kuvaajien piirtäminen tekoälyn avulla. Näitä taitoja tarvitaan viikkotehtävässä 2.
+Tällä luennolla varmistetaan viikkotehtävän PDF-palautus, kerrataan Pythonin perusteita (ohjelman eteneminen, muuttujat ja ehtolauseet) ja aloitetaan kuvaajien piirtäminen.
 
 ## Viikkotehtävän palautus PDF-tiedostona
 
@@ -267,7 +267,7 @@ else:
 
 **Kirjoita ehtolause, joka tulostaa "Runsas sade", jos muuttujan `rain` arvo on yli 10 mm, ja muuten "Vähän tai ei lainkaan sadetta".**
 
-## Datan käsittely ja kuvaajat
+## Kuvaajien piirtäminen
 
 ### Kuvaajan piirtäminen: matplotlib.pyplot.plot()
 
@@ -295,11 +295,20 @@ plt.show()
 
 **Piirrä kertymäesimerkin sademäärien kertymä kuvaajaksi** kirjoittamalla päivät ja kertymät listoihin.
 
-### Luento jatkuu
+[Viikkotehtävä 2](Harjoitus2.md)
+
+# 3. Luento 11.11.2026
+<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
+
+Tällä luennolla luetaan ja käsitellään säädataa Pandas-kirjastolla ja tekoälyn avulla sekä tehdään luentotehtäviä, joissa yhdistetään Pandas-taulukoita ja piirretään erityyppisiä kuvaajia suodattamattomasta navettadatasta tekoälyä hyödyntäen.
+
+## Säädatan käsittely ja tekoälyn hyödyntäminen
+
+**Luo tätä luentoa varten uusi notebook** Google Colabissa.
 
 ### Säädatan lukeminen
 
-Seuraava koodi lukee Ilmatieteen laitoksen tuntikohtaiset säähavainnot Jokioisten Ilmalan tai Seinäjoen Pelmaan sääasemalta. Samoja datoja käytetään viikkotehtävässä 2. Luettava tiedosto valitaan ehtolauseella muuttujan `station` perusteella. Data luetaan pandas-kirjaston *DataFrame*-taulukkoon `df`, jonka jokainen rivi on yhden tunnin havainto.
+Seuraava koodi lukee Ilmatieteen laitoksen tuntikohtaiset säähavainnot Jokioisten Ilmalan tai Seinäjoen Pelmaan sääasemalta. Samoja datoja käytetään [viikkotehtävässä 2](Harjoitus2.md). Luettava tiedosto valitaan ehtolauseella muuttujan `station` perusteella. Data luetaan pandas-kirjaston *DataFrame*-taulukkoon `df`, jonka jokainen rivi on yhden tunnin havainto.
 
 ```python
 import pandas as pd
@@ -379,13 +388,13 @@ Pidemmällä ajanjaksolla x-akselin kellonajat toistuisivat eikä niistä näkis
 
 Colabin Gemini-tekoäly osaa kirjoittaa datan käsittelyyn ja kuvaajien piirtämiseen tarvittavan koodin. Geminin saa käyttöön esimerkiksi tyhjän koodisolun *Generate*-linkistä tai Colab-ikkunan Gemini-painikkeesta. Hyvän tuloksen saa näin:
 
-1. **Suorita ensin datan lukeva koodi** ja kerro promptissa DataFramen ja muuttujien nimet sekä sarakkeiden nimet tarkasti.
-1. **Kerro, mitä haluat laskea ja miten tulos esitetään**, esimerkiksi kuvaajana `plt.plot()`-funktiolla akseleiden otsikoiden kanssa.
-1. **Etene pienin askelin**, yksi asia ja koodisolu kerrallaan.
+1. **Suorita ensin datan lukeva koodi** ja sen jälkeen pyydä tekoälyä tekemään datalla jotain. Kirjoita promptissa DataFramen ja muuttujien nimet sekä sarakkeiden nimet tarkasti, tai vaihtoehtoisesti kuvaile sanallisesti että millä datalla (ilman lämpötila, sademäärä, tms.) haluat tehdä jotain.
+1. **Kerro, mitä haluat laskea ja miten tulos esitetään**, esimerkiksi kuvaajana `plt.plot()`-funktiolla akseleiden otsikoiden kanssa. Tai anna sanallinen kuvaus jos et osaa tehdä pyyntöä tuolla tarkkuudella.
+1. **Etene pienin askelin**, yksi asia ja koodisolu kerrallaan. Tämä neuvo voi tosin olla jo vanhentunutta tietoa, koska paremmat tekoälymallit pystyvät myös tekemään hommia suurempina kokonaisuuksina kunhan niille vain ilmoittaa selkeät tavoitteet. Voit kokeilla eri lähestymistapoja. 
 1. **Lue koodi ja tarkista, onko tulos järkevä.** Esimerkiksi heinäkuun keskilämpötilan pitäisi olla noin +15–20 °C. Jos et ymmärrä jotain kohtaa, pyydä tekoälyä selittämään se.
 1. **Jos tulee virhe**, paina *Explain error* tai kopioi virheilmoitus tekoälylle.
 
-Colabin Geminin ilmainen käyttö on rajoitettua. Jos käyttökerrat tai krediitit loppuvat, voit käyttää muita tekoälyjä, kuten ChatGPT:tä, Copilotia, Claudea, Mistralia tai Deepseekiä. Ne eivät näe notebookiasi, joten kerro promptissa kaikki tarvittava: muuttujien ja sarakkeiden nimet, oma koodisi ja virheilmoitukset kokonaisuudessaan. Kopioi saamasi koodi Colabin koodisoluun.
+Colabin Geminin ilmainen käyttö on rajoitettua. Jos käyttökerrat tai krediitit loppuvat, voit käyttää muita tekoälyjä, kuten ChatGPT:tä, Copilotia, Claudea, Mistralia tai Deepseekiä. Ne eivät näe notebookiasi, joten kerro promptissa kaikki tarvittava: muuttujien ja sarakkeiden nimet, oma koodisi ja virheilmoitukset kokonaisuudessaan. Yleensä tehokkainta on kopioida Colabista kaikki oleellinen koodi ja tulosteet ulkoiselle tekoälylle. Kopioi saamasi koodi Colabin koodisoluun.
 
 Esimerkki promptista:
 
@@ -420,13 +429,108 @@ Funktio `groupby()` jakaa rivit ryhmiin, tässä kuukauden mukaan, ja `agg()` la
 
 **Vaihda sääasema ja suorita kaikki solut.** Myös tekoälyn tuottama koodi toimii toiselle asemalle sellaisenaan: ohjelma kirjoitetaan kerran ja sitä voi käyttää eri datan kanssa.
 
-**Tee tästä notebookista PDF-tiedosto** ja tarkista, että kuvaajat näkyvät siinä.
+## Luentotehtävät: Pandas-taulukoiden yhdistäminen ja kuvaajat
 
-[Viikkotehtävä 2](Harjoitus2.md)
+Tee seuraavat tehtävät luennon aikana samaan tai uuteen Colab-notebookiin käyttäen apuna tekoälyä (esimerkiksi Colabin Geminiä tai muuta AI-chattia). Sinun ei tarvitse muistaa Pandas- tai Matplotlib-komentoja ulkoa: kerro promptissa muuttujien ja sarakkeiden nimet sekä mitä haluat tehdä, suorita koodi yksi vaihe kerrallaan ja tarkastele tulosta kriittisesti.
 
-# 3. Luento 11.11.2026
-<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
+### Tehtävä 1: Taulukoiden yhdistäminen tunnisteen perusteella
 
+Usein analysoitava tieto on jakautunut useaan eri taulukkoon — esimerkiksi samojen kohteiden tai päivämäärien eri mittaustiedot ovat omissa tiedostoissaan ja mahdollisesti eri järjestyksessä. Silloin taulukot yhdistetään yhteisen sarakkeen (avaimen) perusteella.
+
+Kopioi ja suorita seuraava koodisolu, joka luo kaksi pientä esimerkkitaulukkoa:
+
+```python
+import pandas as pd
+
+# Tuotetunniste ja vuoden 2026 myyntiluvut
+df1 = pd.DataFrame({
+    "id": ["KJ101", "KJ102", "KJ103", "KJ104", "KJ105"],
+    "sales_2026": [23, 17, 35, 10, 50]
+})
+
+# Sama tunniste eri sarakkeen nimellä ("model") ja eri järjestyksessä sekä arvosana 1–5
+df2 = pd.DataFrame({
+    "model": ["KJ105", "KJ103", "KJ101", "KJ104", "KJ102"],
+    "rating": [4.9, 4.2, 1.7, 3.2, 3.5]
+})
+```
+
+1. **Tarkastele taulukoiden sisältöä** esimerkiksi komennoilla `display(df1)` ja `display(df2)`. Huomaa, että tunnisteet ovat taulukoissa eri järjestyksessä.
+1. **Pyydä tekoälyä yhdistämään `df1` ja `df2` yhdeksi DataFrameksi** niin, että kutakin tunnistetta (esim. `"KJ101"`) koskevat tiedot tulevat samalle riville ja uuden taulukon sarakkeet ovat `id`, `sales` ja `rating`.
+1. **Tarkista lopputulos** näyttämällä yhdistetty taulukko: varmista, että tuotteen `"KJ101"` myyntiluku on `23` ja arvosana `1.7` (eli rivit yhdistyivät tunnisteen mukaan eivätkä rivinumeron mukaan).
+1. **Etsi paras arvosana tekoälyn avulla:** pyydä uuteen koodisoluun koodi, joka kertoo, millä tuotteella on korkein `rating` ja monennellako rivillä se on. Huomaa, että Pythonissa rivien numerointi alkaa luvusta `0`, kun taas esimerkiksi Excelissä se alkaa luvusta `1`.
+
+### Tehtävä 2: Navetan anturidatojen lukeminen ja yhdistäminen
+
+Toinen yleinen tapa yhdistää taulukoita on liittää samanmuotoiset taulukot **peräkkäin allekkain**, kun niissä on samat sarakkeet. Mustialan navetasta (Barn 4) on kerätty keväällä ja kesällä 2019 olosuhdemittauksia neljällä anturilla (`A`, `B`, `C` ja `D`). Sarakkeet ovat aikaleima (`Timestamp`), laitetunniste (`Device`), hiilidioksidipitoisuus (`CO2`, ppm), suhteellinen ilmankosteus (`Humidity`, %), valoisuus (`Light`, lx), liike (`Motion`) ja lämpötila (`Temperature`, °C).
+
+Todellisessa mittausdatassa on lähes aina katkoksia, puuttuvia arvoja tai virhelukemia. **Älä vielä tässä luentotehtävässä siivoa tai suodata virheellisiä arvoja pois** — jos tekoäly ehdottaa poikkeavien arvojen poistamista oma-aloitteisesti, pyydä sitä pitämään kaikki alkuperäiset rivit mukana. Tarkoituksena on nähdä, miltä suodattamaton "likainen" data näyttää tunnusluvuissa ja kuvaajissa. Data puhdistetaan vasta viikkotehtävässä 3.
+
+Kopioi ja suorita seuraava koodisolu, jossa ovat tiedostojen verkko-osoitteet:
+
+```python
+url_a = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_A_data.csv"
+url_b = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_B_data.csv"
+url_c = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_C_data.csv"
+url_d = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_D_data.csv"
+```
+
+1. **Pyydä tekoälyä lukemaan kaikki neljä CSV-tiedostoa**, lisäämään kuhunkin sarakkeen `"Sensor"` arvolla `"A"`, `"B"`, `"C"` tai `"D"` ja yhdistämään taulukot allekkain yhdeksi DataFrameksi nimeltä `df_barn` suodattamatta rivejä pois.
+1. **Tutki taulukkoa `df_barn` tekoälyn avulla:** tulosta ensimmäiset rivit (`head()`), sarakkeiden tietotyypit (`dtypes`), puuttuvien arvojen määrät sarakkeittain (`isna().sum()`) sekä numeeristen sarakkeiden perustunnusluvut kuten minimi, maksimi ja keskiarvo (`describe()`). Mitä poikkeavaa huomaat luvuista jo ennen kuvaajien piirtämistä?
+
+### Tehtävä 3: Kuvaajien piirtäminen likaisesta navettadatasta
+
+Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä piirtämään kuvaajat suodattamattomasta `df_barn`-taulukosta (esimerkiksi `matplotlib.pyplot`-kirjastolla). Tee kukin kohta omaan koodisoluunsa ja pyydä mukaan selkeät akseleiden otsikot.
+
+#### Pylväsdiagrammi (engl. bar chart)
+
+- X-akselilla luokitteleva (kategorinen) muuttuja
+- Y-akselilla kutakin luokkaa vastaava lukuarvo, esimerkiksi keskiarvo tai lukumäärä
+
+**Pyydä tekoälyä piirtämään pylväsdiagrammi**, jossa x-akselilla on anturi (`Sensor`) ja y-akselilla anturin keskimääräinen lämpötila (`Temperature`).
+
+**Pyydä toinen pylväsdiagrammi**, jossa x-akselilla on `Sensor` ja y-akselilla puuttuvien `CO2`-havaintojen lukumäärä kullakin anturilla.
+
+*Pohdi:* Miltä antureiden A ja B keskilämpötilat näyttävät verrattuna antureihin C ja D? Millä anturilla puuttuvia `CO2`-arvoja on selvästi eniten?
+
+#### XY-diagrammi eli hajontakaavio (engl. scatter plot)
+
+- X-akselilla ensimmäisen muuttujan arvot ja y-akselilla toisen muuttujan arvot
+- Jokainen havainto piirretään pisteenä `(x, y)`, mikä paljastaa muuttujien välisen riippuvuuden sekä poikkeavat havainnot (engl. *outliers*)
+
+**Pyydä tekoälyä piirtämään XY-diagrammi** taulukosta `df_barn`, jossa x-akselilla on `Temperature` ja y-akselilla `Humidity`. Mitä virhelukemat tekevät kuvaajan asteikolle, ja mikä on ilmankosteuden lukema silloin, kun lämpötila on virheellinen?
+
+**Pyydä tekoälyä piirtämään aikasarjana pisteinä** antureiden A ja B lämpötilat (`Timestamp` x-akselilla ja `Temperature` y-akselilla). Tarkista, että merkkijonona tallennettu `Timestamp` muunnetaan ensin `datetime`-aikaleimaksi — muuten Python käsittelee jokaisen kellonajan erillisenä kategoriana ja kuvaajan piirtäminen jumiutuu. Milloin virhelukemat alkoivat kummallakin anturilla?
+
+#### Histogrammi (engl. histogram)
+
+- X-akselilla lukuarvojen tasaväliset luokat (intervallit, engl. *bins*)
+- Y-akselilla kuhunkin väliin osuvien havaintojen lukumäärä aineistossa
+
+**Pyydä tekoälyä piirtämään histogrammi** `df_barn`-taulukon hiilidioksidipitoisuuksista (`CO2`) niin, että ensimmäinen pylväs alkaa arvosta `0` ja pylväiden leveys on `200` ppm.
+
+*Pohdi:* Millä pitoisuusvälillä valtaosa navetan mittauksista on? Ulkoilman hiilidioksidipitoisuus on noin 400 ppm — näkyykö jakaumassa sitä pienempiä arvoja tai hyvin suuria yksittäisiä lukemia, jotka venyttävät x-akselia oikealle? (Vinkki: voit pyytää tekoälyä kokeilemaan logaritmista y-akselia, jolloin myös yksittäiset poikkeavat havainnot erottuvat.)
+
+#### Lämpökartta eli korrelaatiomatriisi (engl. heatmap)
+
+- Ruudun väri määräytyy lukuarvon mukaan
+- Korrelaatiokertoimet vaihtelevat välillä −1…+1 (+1 = voimakas samansuuntainen yhteys, 0 = ei lineaarista yhteyttä, −1 = voimakas vastakkaissuuntainen yhteys)
+
+**Pyydä tekoälyä piirtämään 2D-heatmap**, jossa näkyy `df_barn`-taulukon kaikkien numeeristen muuttujien (`CO2`, `Humidity`, `Light`, `Motion`, `Temperature`) välinen korrelaatio sekä lukuarvot ruuduissa.
+
+**Pyydä sen jälkeen vastaava heatmap pelkästään anturin C riveistä** (`Sensor == "C"`).
+
+*Pohdi:* Vertaile lämpötilan (`Temperature`) ja ilmankosteuden (`Humidity`) välistä korrelaatiota koko suodattamattomassa datassa ja pelkän anturin C datassa. Kuinka paljon likainen data muuttaa johtopäätöstä?
+
+### Muita kuvaajatyyppejä ja kuvaajien muokkaus
+
+Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin esimerkkigalleriassa](https://matplotlib.org/stable/gallery/index.html). Voit myös kokeilla pyytää tekoälyä muokkaamaan tekemääsi kuvaajaa — esimerkiksi rajaamaan XY-diagrammin akselit pelkästään järkevälle lämpötilavälille (muuttamatta itse dataa), vaihtamaan värejä ja pisteiden läpinäkyvyyttä tai asettelemaan useamman kuvaajan vierekkäin.
+
+### Keskustelua ulkoisista datatarpeista data-analytiikkaprojektiin liittyen
+
+Keskustellaan data-analytiikkaprojektiin tarvittavista/toivotuista lisädatoista ja että mistä niitä voisi saada.
+
+### Viikkotehtävä 3
 
 [Viikkotehtävä 3](Harjoitus3.md)
 
