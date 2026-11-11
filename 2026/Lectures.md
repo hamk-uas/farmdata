@@ -1,4 +1,4 @@
-<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 46c89f3dfcc6266c31611e98eab40bd8336088a1. To catch up, translate the changes shown by: git diff 46c89f3dfcc6266c31611e98eab40bd8336088a1 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 5ec8cbad3ef9eb5a455fd42243c2b63f06ab5dcf. To catch up, translate the changes shown by: git diff 5ec8cbad3ef9eb5a455fd42243c2b63f06ab5dcf HEAD -- 2026/Luennot.md (then update the commit hash here). -->
 Autumn 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
@@ -119,7 +119,7 @@ print(sentence)
 # 2. Lecture 4.11.2026
 <!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
 
-In this lecture we make sure everyone can return the weekly exercise as a PDF, revise Python basics (program flow, variables and conditional statements), and start processing weather data and plotting it with the help of AI. These skills are needed in weekly exercise 2.
+In this lecture we make sure everyone can return the weekly exercise as a PDF, revise Python basics (program flow, variables and conditional statements), and start plotting.
 
 ## Returning the weekly exercise as a PDF
 
@@ -268,7 +268,7 @@ else:
 
 **Write a conditional statement that prints "Heavy rain" if the value of the variable `rain` is more than 10 mm, and otherwise "Little or no rain".**
 
-## Data processing and plots
+## Drawing plots
 
 ### Plotting: matplotlib.pyplot.plot()
 
@@ -296,11 +296,20 @@ plt.show()
 
 **Plot the cumulative precipitation from the cumulative sum example** by writing the days and the cumulative sums into lists.
 
-### Lecture continues
+[Weekly exercise 2](Exercise2.md)
+
+# 3. Lecture 11.11.2026
+<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
+
+In this lecture we read and process weather data using the Pandas library and AI, and complete in-lecture exercises on merging Pandas tables and drawing different types of plots from unfiltered barn data with the help of AI.
+
+## Processing weather data and using AI
+
+**Create a new notebook for this lecture** in Google Colab.
 
 ### Reading weather data
 
-The following code reads hourly weather observations of the Finnish Meteorological Institute from the Ilmala, Jokioinen or the Pelmaa, Seinäjoki weather station. The same data are used in weekly exercise 2. The file to read is chosen with a conditional statement based on the variable `station`. The data are read into a pandas *DataFrame* table `df`, in which each row is the observation of one hour.
+The following code reads hourly weather observations of the Finnish Meteorological Institute from the Ilmala, Jokioinen or the Pelmaa, Seinäjoki weather station. The same data are used in [weekly exercise 2](Exercise2.md). The file to read is chosen with a conditional statement based on the variable `station`. The data are read into a pandas *DataFrame* table `df`, in which each row is the observation of one hour.
 
 ```python
 import pandas as pd
@@ -380,13 +389,13 @@ Over a longer period, the times on the x-axis would repeat and you could not see
 
 Colab's Gemini AI can write the code needed for processing data and drawing plots. You can use Gemini for example through the *Generate* link of an empty code cell or through the Gemini button of the Colab window. To get good results:
 
-1. **First run the code that reads the data**, and in the prompt, give the names of the DataFrame, the variables and the columns exactly.
-1. **Say what you want to calculate and how the result should be presented**, for example as a plot drawn with the `plt.plot()` function, with axis labels.
-1. **Proceed in small steps**, one thing and one code cell at a time.
+1. **First run the code that reads the data**, and then ask the AI to do something with the data. In the prompt, write the names of the DataFrame, variables, and columns accurately, or alternatively describe in words which data (air temperature, precipitation, etc.) you want to work with.
+1. **Say what you want to calculate and how the result should be presented**, for example as a plot drawn with the `plt.plot()` function, with axis labels. Or give a verbal description if you do not know how to phrase the request at that level of detail.
+1. **Proceed in small steps**, one thing and one code cell at a time. That advice may, however, already be outdated, as better AI models can also handle larger wholes at once as long as you state clear goals. You can try different approaches.
 1. **Read the code and check whether the result makes sense.** For example, the mean temperature of July should be about +15–20 °C. If you do not understand something, ask the AI to explain it.
 1. **If you get an error**, press *Explain error* or copy the error message to the AI.
 
-Free use of Colab's Gemini is limited. If you run out of uses or credits, you can use other AI tools, such as ChatGPT, Copilot, Claude, Mistral or Deepseek. They cannot see your notebook, so give everything needed in the prompt: the names of the variables and columns, your own code and any error messages in full. Copy the code you get into a Colab code cell.
+Free use of Colab's Gemini is limited. If you run out of uses or credits, you can use other AI tools, such as ChatGPT, Copilot, Claude, Mistral or Deepseek. They cannot see your notebook, so give everything needed in the prompt: the names of the variables and columns, your own code and any error messages in full. Usually the most effective way is to copy all relevant code and outputs from Colab to the external AI. Copy the code you get into a Colab code cell.
 
 Example prompt:
 
@@ -421,12 +430,112 @@ The function `groupby()` divides the rows into groups, here by month, and `agg()
 
 **Switch the weather station and run all cells.** The code produced by the AI also works for the other station as such: a program is written once and can be used with different data.
 
-**Make a PDF file of this notebook** and check that the plots are visible in it.
+## In-lecture exercises: Merging Pandas tables and plotting
 
-[Weekly exercise 2](Exercise2.md)
+Complete the following exercises during the lecture in the same or a new Colab notebook using AI for assistance (for example Colab's Gemini or another AI chat). You do not need to remember Pandas or Matplotlib commands by heart: state the variable and column names and what you want to do in your prompt, run the code one step at a time, and examine the results critically.
 
-# 3. Lecture 11.11.2026
-<!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
+### Task 1: Merging tables based on an identifier
+
+Data to be analyzed are often split across multiple tables — for example, different measurements for the same items or dates may be in separate files and possibly in different orders. In such cases, the tables are merged based on a shared column (key).
+
+Copy and run the following code cell, which creates two small example tables:
+
+```python
+import pandas as pd
+
+# Product ID and 2026 sales numbers
+df1 = pd.DataFrame({
+    "id": ["KJ101", "KJ102", "KJ103", "KJ104", "KJ105"],
+    "sales_2026": [23, 17, 35, 10, 50]
+})
+
+# The same ID under a different column name ("model") and in a different order, plus rating 1–5
+df2 = pd.DataFrame({
+    "model": ["KJ105", "KJ103", "KJ101", "KJ104", "KJ102"],
+    "rating": [4.9, 4.2, 1.7, 3.2, 3.5]
+})
+```
+
+1. **Inspect the contents of the tables**, for example with `display(df1)` and `display(df2)`. Notice that the identifiers are in different orders in the two tables.
+1. **Ask the AI to merge `df1` and `df2` into a single DataFrame** so that all information for each identifier (e.g. `"KJ101"`) is on the same row and the columns of the new table are `id`, `sales`, and `rating`.
+1. **Check the result** by displaying the merged table: make sure that product `"KJ101"` has sales `23` and rating `1.7` (meaning the rows were matched by identifier rather than by row position).
+1. **Find the best rating using AI:** in a new code cell, ask for code that tells which product has the highest `rating` and on which row number it is located. Note that in Python, row numbering starts at `0`, whereas in Excel, for example, it starts at `1`.
+
+### Task 2: Reading and combining barn sensor data
+
+Another common way to combine tables is to stack tables of the same structure **one below another** when they share the same columns. Environmental measurements were collected in the Mustiala barn (Barn 4) in spring and summer 2019 using four sensors (`A`, `B`, `C`, and `D`). The columns are timestamp (`Timestamp`), device identifier (`Device`), carbon dioxide concentration (`CO2`, ppm), relative humidity (`Humidity`, %), illuminance (`Light`, lx), motion (`Motion`), and temperature (`Temperature`, °C).
+
+Real-world measurement data almost always contain gaps, missing values, or erroneous readings. **Do not clean or filter out erroneous values yet in this in-lecture exercise** — if the AI suggests removing anomalous values on its own, ask it to keep all original rows. The goal here is to see what unfiltered "dirty" data look like in summary statistics and plots. The data will be cleaned in weekly exercise 3.
+
+Copy and run the following code cell containing the URLs of the files:
+
+```python
+url_a = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_A_data.csv"
+url_b = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_B_data.csv"
+url_c = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_C_data.csv"
+url_d = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/Barn4_D_data.csv"
+```
+
+1. **Ask the AI to read all four CSV files**, add a `"Sensor"` column with value `"A"`, `"B"`, `"C"`, or `"D"` to each, and concatenate the tables vertically into a single DataFrame named `df_barn` without filtering out any rows.
+1. **Explore `df_barn` with the help of AI:** print the first rows (`head()`), column data types (`dtypes`), missing value counts per column (`isna().sum()`), and basic summary statistics for numerical columns such as minimum, maximum, and mean (`describe()`). What anomalies do you notice in the numbers even before plotting?
+
+### Task 3: Plotting dirty barn data
+
+Next, practice creating different types of plots by asking the AI to draw plots from the unfiltered `df_barn` table (for example using `matplotlib.pyplot`). Put each part in its own code cell and ask for clear axis labels.
+
+#### Bar chart
+
+- Categorical variable on the x-axis
+- A numerical value corresponding to each category on the y-axis, such as a mean or count
+
+**Ask the AI to draw a bar chart** with the sensor (`Sensor`) on the x-axis and the mean temperature (`Temperature`) of each sensor on the y-axis.
+
+**Ask for a second bar chart** with `Sensor` on the x-axis and the count of missing `CO2` observations for each sensor on the y-axis.
+
+*Think:* How do the mean temperatures of sensors A and B look compared to sensors C and D? Which sensor clearly has the most missing `CO2` values?
+
+#### XY plot (scatter plot)
+
+- Values of the first variable on the x-axis and values of the second variable on the y-axis
+- Each observation is plotted as a point `(x, y)`, revealing relationships between variables as well as *outliers*
+
+**Ask the AI to draw a scatter plot** from `df_barn` with `Temperature` on the x-axis and `Humidity` on the y-axis. What do the erroneous readings do to the scale of the plot, and what is the humidity reading when the temperature is erroneous?
+
+**Ask the AI to plot as a time series of points** the temperatures of sensors A and B (`Timestamp` on the x-axis and `Temperature` on the y-axis). Make sure that `Timestamp`, which is stored as a string, is first converted to a `datetime` timestamp — otherwise Python treats every timestamp as a separate category and plotting stalls. When did the erroneous readings start on each sensor?
+
+#### Histogram
+
+- Equally spaced value intervals (*bins*) on the x-axis
+- The number of observations falling into each interval on the y-axis
+
+**Ask the AI to draw a histogram** of the carbon dioxide concentrations (`CO2`) in `df_barn` so that the left edge of the first bar starts at `0` and the bin width is `200` ppm.
+
+*Think:* In what concentration range do most of the barn measurements fall? Outdoor air carbon dioxide concentration is around 400 ppm — do you see lower values than that in the distribution, or very high individual readings that stretch the x-axis to the right? (Tip: you can ask the AI to try a logarithmic y-axis so that individual outlier observations also stand out.)
+
+#### Heatmap (correlation matrix)
+
+- The color of each cell is determined by a numerical value
+- Correlation coefficients range from −1 to +1 (+1 = strong positive relationship, 0 = no linear relationship, −1 = strong negative relationship)
+
+**Ask the AI to draw a 2D heatmap** showing the correlation between all numerical variables (`CO2`, `Humidity`, `Light`, `Motion`, `Temperature`) in `df_barn`, with the numerical values displayed inside the cells.
+
+**Next, ask for the corresponding heatmap using only the rows from sensor C** (`Sensor == "C"`).
+
+*Think:* Compare the correlation between temperature (`Temperature`) and humidity (`Humidity`) in the full unfiltered dataset versus sensor C alone. How much does dirty data change the conclusion?
+
+### Other plot types and customizing plots
+
+If time permits, you can browse different plot options in the [Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html). You can also ask the AI to customize a plot you created — for example limiting the scatter plot axes to a reasonable temperature range (without modifying the data itself), changing colors and point transparency, or arranging multiple plots side by side.
+
+### Discussion on external data needs for the data analytics project
+
+Let's discuss what additional data are needed or desired for the data analytics project and where they could be obtained.
+
+A couple of examples:
+* Paituli -- spatial data from Finnish data producers https://paituli.csc.fi/
+* Field Observatory -- farm-level data related to carbon sequestration, compiled from various sources https://www.fieldobservatory.org/index.php/online-field-data/
+
+### Weekly exercise 3
 
 [Weekly exercise 3](Exercise3.md)
 
