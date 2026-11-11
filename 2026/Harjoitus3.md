@@ -17,6 +17,8 @@ THI:n laskentaan käytetään tässä harjoituksessa kaavaa (Dikmen & Hansen, 20
 THI2 = Tdb + 0.36Tdp + 41.2,
 missä Tdb​ on ilman lämpötila (°C) (dry bulb temperature) ja Tdp​ on kastepistelämpötila (°C) (dew point temperature). Kastepiste tulee arvioida lämpötilan ja suhteellisen kosteuden perusteella käyttäen Magnus-Tetens kaavaa.
 
+Lisää harjoituksen taustoitusta ja mittausasetelman kuvailua voit lukea tekstistä Koskela et al, 2019, Suomen Maataloustieteellisen Seuran Tiedote 38, https://doi.org/10.33354/smst.89300.
+
 ### Tavoite
 
 Tavoitteena on tutkia:
