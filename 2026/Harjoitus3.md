@@ -6,7 +6,20 @@ Annettu [luennolla 11.11.2026](Luennot.md#3-luento-11112026)
 
 ### Tausta
 
-Lypsykarjan lämpöstressiä arvioidaan usein Temperature Humidity Indexin (THI) avulla. Tässä harjoituksessa tutustut maatalouden datan analysointiin käyttäen tekoälyä apuna sekä datan käsittelyssä että visualisointien tuottamisessa.
+Lypsykarjan tuotantoon vaikuttavat monet ympäristötekijät, joista lämpötila ja kosteus ovat erityisen tärkeitä. Korkea lämpötila yhdistettynä suureen ilmankosteuteen voi aiheuttaa eläimille lämpöstressiä, mikä heikentää hyvinvointia, syöntiä ja maitotuotosta. Lämpöstressin arviointiin käytetään yleisesti Temperature Humidity Indexiä (THI), joka yhdistää lämpötilan ja kosteuden yhdeksi tunnusluvuksi.
+
+Tässä harjoituksessa analysoidaan Mustialan tutkimusnavetassa kerättyä mittausaineistoa. Navetassa mitattiin lämpötilaa ja suhteellista kosteutta useista mittauspisteistä, ja lisäksi käytettävissä on lähimmän sääaseman säähavaintoja sekä karjan päivittäiset maitotuotostiedot. Aineiston avulla voidaan tutkia, miten navetan olosuhteet poikkeavat ulkoilmasta ja näkyykö lämpöstressin vaikutus maitotuotoksessa.
+
+Harjoituksen tavoitteena on tutustua datatieteen keskeisiin työvaiheisiin:
+
+1. datan laadun tarkastamiseen ja puhdistamiseen
+1. uusien muuttujien muodostamiseen (feature engineering)
+1. aika- ja mittausaineistojen yhdistämiseen
+1. datan visualisointiin
+1. korrelaatioiden tarkasteluun
+1. tekoälyn tuottaman analyysin kriittiseen arviointiin
+
+Samalla harjoitellaan tekoälyn käyttöä ohjelmointityön tukena. Tekoälyä voidaan hyödyntää esimerkiksi Python-koodin kirjoittamisessa, visualisointien tuottamisessa ja tulosten tulkinnan tukena. Tuotettuja tuloksia ei kuitenkaan tule hyväksyä sellaisinaan, vaan analyysin oikeellisuutta ja johtopäätöksiä on arvioitava kriittisesti.
 
 Sinulle on annettu seuraavat aineistot, joiden lukemiseen on mallikoodit alla:
 1. df_jokioinen: ulkoilman sääasema-aineisto
