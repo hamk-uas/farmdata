@@ -530,6 +530,10 @@ Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin es
 
 Keskustellaan data-analytiikkaprojektiin tarvittavista/toivotuista lisädatoista ja että mistä niitä voisi saada.
 
+Muutama esimerkki:
+* Paituli -- paikkatietodataa suomalaisilta tuottajilta https://paituli.csc.fi/
+* Pelto-observatorio -- hiilensidontaan liittyvää maatilaa koskevaa dataa koottuna eri lähteistä https://www.fieldobservatory.org/index.php/online-field-data/
+
 ### Viikkotehtävä 3
 
 [Viikkotehtävä 3](Harjoitus3.md)
