@@ -554,7 +554,20 @@ Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin es
 
 ## Ulkoisia datalähteitä
 
-TODO
+Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan traktoreiden tai lypsykoneen keräämään dataan. Seuraavat ulkoisista lähteistä saatavat historialliset datat saattavat tuoda analyyseihin lisäarvoa.
+
+### Säädata
+
+Palveluita:
+* Ilmatieteen laitos
+
+### Satelliittidata
+
+Palveluita:
+* Copernicus Climate Data Store
+* Copernicud Data Space Ecosystem
+* Google Earth Engine
+* Microsoft Planetary Computer
 
 ## Viikkotehtävä 4
 
