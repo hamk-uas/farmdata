@@ -556,23 +556,52 @@ Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin es
 
 Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan traktoreiden tai lypsykoneen keräämään dataan. Seuraavat ulkoisista lähteistä saatavat historialliset datat saattavat tuoda analyyseihin lisäarvoa. Luennon lopussa annettavassa viikkotehtävässä arvioidaan lisädatoja data-analyysiprojektin kannalta.
 
+Voit kopioida kunkin esimerkkityökirjan osoitteen selaimen osoitekentästä avattuasi työkirjan GitHubissa, minkä jälkeen voit tuoda sen suoraan Colabiin [Google Colabissa](https://colab.research.google.com/) näin: Upload notebook -> GitHub -> liitä osoite syötekenttään.
+
+### Korkeusmalli ja satelliitti-indeksit
+
+Ilmatieteen laitoksen **Tuulituhohaukka-palvelu** tuottaa mielenkiintoisia jatkuvasti päivittyviä datoja. https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/root.json
+
+* **Korkeusmalli** https://browser.moregeo.it/external/paituli.csc.fi/geoserver/ogc/stac/v1/collections/2m_digital_terrain_model_products_at_fmi
+
+* **Satelliitti-indeksit** https://pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json
+
+[Työkirja](lecture4/field_tracks_and_stac.ipynb), tehty pääosin Gemini 4 Hydrogen tekoälymallilla ja promptilla:
+
+> Let's create a new Lecture 4 notebook. Take the field blocks with "id" values "mu_0" and "mu_1" from https://field-observatory.data.lit.fmi.fi/fieldobs_blocks_translated.geojson?date=2026-11-17-12h and copy their geometries to your Python code. Generate also plausible timestamped tractor tracks working on the two fields on a single day on two different months in summer 2025.
+>
+> Use network-friendly reads to obtain the satellite image index data from https://pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json along the tracks.
+>
+> Also read https://pta.data.lit.fmi.fi/stac/catalog/MML-DTM-2m/MML-DTM-2m.json to obtain the height curve along the timestamped track.
+>
+> Plot these time series in the notebook.
+
 ### Säädata
 
-Ilmatieteen laitoksen historiallinen säädata https://en.ilmatieteenlaitos.fi/open-data-manual
+**Ilmatieteen laitoksen historiallinen säädata** https://en.ilmatieteenlaitos.fi/open-data-manual
 
-[ipynb-työkirja Ilmatieteen laitoksen datojen lataamiseen](lecture4/fmi_weather_data.ipynb), tehty pääosin Gemini 4 Hydrogen -tekoälymallilla ja promptilla:
+[Työkirja](lecture4/fmi_weather_data.ipynb), tehty pääosin promptilla:
+
 > Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
-
-Voit tuoda työkirjan GitHubista suoraan [Google Colabiin](https://colab.research.google.com/): Upload notebook -> GitHub -> kopioi selaimen osoiterivi GitHubista ja liitä se syötekenttään.
 
 Sääasemadatojen lisäksi Ilmatieteen laitoksella on kuukausittaista "gridattua" dataa, jossa säämuuttujien arvoja arvioidaan myös sääasemien ulkopuolella. Tarjolla on myös salamaniskudataa.
 
+### Ilmastodata
+
+**Datanlatauspalveluita**
+
+* Copernicus Climate Data Store https://cds.climate.copernicus.eu/
+
 ### Satelliittidata
 
-Copernicus Climate Data Store
-Copernicud Data Space Ecosystem
-Google Earth Engine
-Microsoft Planetary Computer
+NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. Google ja Microsoft tarjoavat omia palveluita, joiden kautta saa monenlaista dataa kuten satelliittidataa ja voi tehdä laskentaa niistä ja omista datoista.
+
+* Copernicus Data Space Ecosystem https://dataspace.copernicus.eu/
+
+**Laskentapalveluita**
+
+* Google Earth Engine
+* Microsoft Planetary Computer
 
 ## Viikkotehtävä 4
 
