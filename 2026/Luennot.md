@@ -565,6 +565,8 @@ Ilmatieteen laitoksen historiallinen säädata https://en.ilmatieteenlaitos.fi/o
 
 Voit tuoda työkirjan GitHubista suoraan [Google Colabiin](https://colab.research.google.com/): Upload notebook -> GitHub -> kopioi selaimen osoiterivi GitHubista ja liitä se syötekenttään.
 
+Sääasemadatojen lisäksi Ilmatieteen laitoksella on kuukausittaista "gridattua" dataa, jossa säämuuttujien arvoja arvioidaan myös sääasemien ulkopuolella. Tarjolla on myös salamaniskudataa.
+
 ### Satelliittidata
 
 Copernicus Climate Data Store
