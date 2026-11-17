@@ -554,20 +554,23 @@ Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin es
 
 ## Ulkoisia datalähteitä
 
-Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan traktoreiden tai lypsykoneen keräämään dataan. Seuraavat ulkoisista lähteistä saatavat historialliset datat saattavat tuoda analyyseihin lisäarvoa.
+Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan traktoreiden tai lypsykoneen keräämään dataan. Seuraavat ulkoisista lähteistä saatavat historialliset datat saattavat tuoda analyyseihin lisäarvoa. Luennon lopussa annettavassa viikkotehtävässä arvioidaan lisädatoja data-analyysiprojektin kannalta.
 
 ### Säädata
 
-Palveluita:
-* Ilmatieteen laitos
+Ilmatieteen laitoksen historiallinen säädata https://en.ilmatieteenlaitos.fi/open-data-manual
+
+Esimerkkiprompti:
+> Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
+
+Koska tekoälyjen laatu vaihtelee, 
 
 ### Satelliittidata
 
-Palveluita:
-* Copernicus Climate Data Store
-* Copernicud Data Space Ecosystem
-* Google Earth Engine
-* Microsoft Planetary Computer
+Copernicus Climate Data Store
+Copernicud Data Space Ecosystem
+Google Earth Engine
+Microsoft Planetary Computer
 
 ## Viikkotehtävä 4
 
