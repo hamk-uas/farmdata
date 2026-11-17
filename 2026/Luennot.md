@@ -562,9 +562,9 @@ Voit kopioida kunkin esimerkkityökirjan osoitteen selaimen osoitekentästä ava
 
 Ilmatieteen laitoksen **Tuulituhohaukka-palvelu** tuottaa mielenkiintoisia jatkuvasti päivittyviä datoja. https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/root.json
 
-* **Korkeusmalli** https://browser.moregeo.it/external/paituli.csc.fi/geoserver/ogc/stac/v1/collections/2m_digital_terrain_model_products_at_fmi
+* **Korkeusmalli** https://browser.moregeo.it/external/paituli.csc.fi/geoserver/ogc/stac/v1/collections/2m_digital_terrain_model_products_at_fmi perustuu MML:n dataan
 
-* **Satelliitti-indeksit** https://pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json
+* **ESA:n Sentinel 2 -satelliittien kuvista lasketut indeksit** https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json
 
 [Työkirja](lecture4/field_tracks_and_stac.ipynb), tehty pääosin Gemini 4 Hydrogen tekoälymallilla ja promptilla:
 
@@ -576,32 +576,42 @@ Ilmatieteen laitoksen **Tuulituhohaukka-palvelu** tuottaa mielenkiintoisia jatku
 >
 > Plot these time series in the notebook.
 
+![Korkeusmalli ja traktorin ajoura](assets/dem.png)
+
+![Sentinel-2-indeksit ajouralla](assets/ndvi.png)
+
 ### Säädata
 
-**Ilmatieteen laitoksen historiallinen säädata** https://en.ilmatieteenlaitos.fi/open-data-manual
+**Ilmatieteen laitoksen historiallinen sääasemadata** päivä- ja tuntitasolla https://en.ilmatieteenlaitos.fi/open-data-manual
 
 [Työkirja](lecture4/fmi_weather_data.ipynb), tehty pääosin promptilla:
 
 > Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
 
+![Ilmatieteen laitoksen päivätason säähavainnot](assets/fmi_weather.png)
+
+![Ilmatieteen laitoksen säteilyhavainnot](assets/fmi_radiation.png)
+
 Sääasemadatojen lisäksi Ilmatieteen laitoksella on kuukausittaista "gridattua" dataa, jossa säämuuttujien arvoja arvioidaan myös sääasemien ulkopuolella. Tarjolla on myös salamaniskudataa.
 
 ### Ilmastodata
 
-**Datanlatauspalveluita**
+NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. 
 
-* Copernicus Climate Data Store https://cds.climate.copernicus.eu/
+**Copernicus Climate Data Store** https://cds.climate.copernicus.eu/
 
 ### Satelliittidata
 
-NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. Google ja Microsoft tarjoavat omia palveluita, joiden kautta saa monenlaista dataa kuten satelliittidataa ja voi tehdä laskentaa niistä ja omista datoista.
+NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. 
 
-* Copernicus Data Space Ecosystem https://dataspace.copernicus.eu/
+**Copernicus Data Space Ecosystem** https://dataspace.copernicus.eu/
 
-**Laskentapalveluita**
+## Laskentapalveluita satelliitti- ym. datalle
 
-* Google Earth Engine
-* Microsoft Planetary Computer
+Google ja Microsoft tarjoavat omia palveluita, joiden kautta saa monenlaista dataa kuten satelliittidataa ja voi tehdä laskentaa niistä ja omista datoista.
+
+* Google Earth Engine https://earthengine.google.com/
+* Microsoft Planetary Computer https://planetarycomputer.microsoft.com/
 
 ## Viikkotehtävä 4
 
