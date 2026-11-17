@@ -560,10 +560,8 @@ Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan tr
 
 Ilmatieteen laitoksen historiallinen säädata https://en.ilmatieteenlaitos.fi/open-data-manual
 
-Esimerkkiprompti:
+[ipynb-työkirja](lecture4/fmi_weather_data.ipynb), tehty pääosin promptilla:
 > Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
-
-Koska tekoälyjen laatu vaihtelee, 
 
 ### Satelliittidata
 
