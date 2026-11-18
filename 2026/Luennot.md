@@ -558,6 +558,10 @@ Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan tr
 
 Voit kopioida kunkin esimerkkityökirjan osoitteen selaimen osoitekentästä avattuasi työkirjan GitHubissa, minkä jälkeen voit tuoda sen suoraan Colabiin [Google Colabissa](https://colab.research.google.com/) näin: Upload notebook -> GitHub -> liitä osoite syötekenttään.
 
+### Suomalainen avoin paikkatietodata
+
+CSC (Tieteen tietotekniikan keskus Oy) Paituli-palvelu jakaa ja luetteloi suomalaisten datantuottajien ja muuta Suomea koskevaa avointa paikkatietodataa. https://paituli.csc.fi/
+
 ### Korkeusmalli ja satelliitti-indeksit
 
 Ilmatieteen laitoksen **Tuulituhohaukka-palvelu** tuottaa mielenkiintoisia jatkuvasti päivittyviä datoja. https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/root.json
