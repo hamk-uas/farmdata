@@ -478,11 +478,37 @@ url_d = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/202
 1. **Pyydä tekoälyä lukemaan kaikki neljä CSV-tiedostoa**, lisäämään kuhunkin sarakkeen `"Sensor"` arvolla `"A"`, `"B"`, `"C"` tai `"D"` ja yhdistämään taulukot allekkain yhdeksi DataFrameksi nimeltä `df_barn` suodattamatta rivejä pois.
 1. **Tutki taulukkoa `df_barn` tekoälyn avulla:** tulosta ensimmäiset rivit (`head()`), sarakkeiden tietotyypit (`dtypes`), puuttuvien arvojen määrät sarakkeittain (`isna().sum()`) sekä numeeristen sarakkeiden perustunnusluvut kuten minimi, maksimi ja keskiarvo (`describe()`). Mitä poikkeavaa huomaat luvuista jo ennen kuvaajien piirtämistä?
 
-### Tehtävä 3: Kuvaajien piirtäminen likaisesta navettadatasta
+### Keskustelua ulkoisista datatarpeista data-analytiikkaprojektiin liittyen
+
+Keskustellaan data-analytiikkaprojektiin tarvittavista/toivotuista lisädatoista ja että mistä niitä voisi saada.
+
+Muutama esimerkki:
+* Paituli -- paikkatietodataa suomalaisilta tuottajilta https://paituli.csc.fi/
+* Pelto-observatorio -- hiilensidontaan liittyvää maatilaa koskevaa dataa koottuna eri lähteistä https://www.fieldobservatory.org/index.php/online-field-data/
+
+### Viikkotehtävä 3
+
+[Viikkotehtävä 3](Harjoitus3.md)
+
+# 4. Luento 18.11.2026
+
+Tällä luennolla jatketaan kuvaajien piirtoa edellisen luennon Tehtävä 2 suodattamattomasta navettadatasta (`df_barn`) ja tutustutaan erilaisiin julkisiin datalähteisiin data-analyysiprojektin tueksi.
+
+## Lisäohjeita tekoälyn käyttöön
+
+Tekoälymallit, varsinkin halvat sellaiset, eivät aina osaa lukea niille annettua tehtävänantoa "rivien välistä", vaan voivat noudattaa ohjeita joskus liiankin kirjaimellisesti. Samoin kuin ihmiselle tehtävää antaessa, tekoälykin suoriutuu paremmin kun sille kertoo laajemmin taustoista ja suuren linjan tavoitteista, jolloin se paremmin ymmärtää mitä tarvitaan eikä noudata huolimatonta tehtävänantoa haitallisen tarkasti. Toinen vaihtoehto on toki tehdä hyvin tarkka ja osuva pyyntö, mutta se on hitaampi ja raskaampi lähestymistapa. Tekoälymallit kehittyvät jatkuvasti, ja suunta on, että ne ymmärtävät ohjeita yhä joustavammin samaan tapaan kuin ihminen, hyödyntäen laajaa ja syvää sisäänrakennettua tietämystään eri asioista.
+
+## Luentotehtävä 1: Kuvaajia likaisesta Pandas-navettadataa
+
+Palataan edellisen luennon Tehtävä 2 navettadataan. Avaa 3. luennon Tehtävä 2 Colab-työkirja, tai jos sinulla ei ole sitä enää tallessa, lisää tehtävänannon koodileike uuteen koodisoluun ja syötä seuraava ohje tekoälylle:
+
+```text
+Lue kaikki neljä CSV-tiedostoa ja lisää kuhunkin dataframeen 'Sensor'-sarake, johon tulee 'A', 'B', 'C' tai 'D' riippuen mistä urlista on kyse. Älä putsaa dataa millään tavalla. Kokoa dataframejen sisältö allekkain yhteen dataframeen df_barn. Printtaa df_barn sisältöä."
+```
 
 Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä piirtämään kuvaajat suodattamattomasta `df_barn`-taulukosta (esimerkiksi `matplotlib.pyplot`-kirjastolla). Tee kukin kohta omaan koodisoluunsa ja pyydä mukaan selkeät akseleiden otsikot.
 
-#### Pylväsdiagrammi (engl. bar chart)
+### Pylväsdiagrammi (engl. bar chart)
 
 - X-akselilla luokitteleva (kategorinen) muuttuja
 - Y-akselilla kutakin luokkaa vastaava lukuarvo, esimerkiksi keskiarvo tai lukumäärä
@@ -493,7 +519,7 @@ Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä pii
 
 *Pohdi:* Miltä antureiden A ja B keskilämpötilat näyttävät verrattuna antureihin C ja D? Millä anturilla puuttuvia `CO2`-arvoja on selvästi eniten?
 
-#### XY-diagrammi eli hajontakaavio (engl. scatter plot)
+### XY-diagrammi eli hajontakaavio (engl. scatter plot)
 
 - X-akselilla ensimmäisen muuttujan arvot ja y-akselilla toisen muuttujan arvot
 - Jokainen havainto piirretään pisteenä `(x, y)`, mikä paljastaa muuttujien välisen riippuvuuden sekä poikkeavat havainnot (engl. *outliers*)
@@ -502,7 +528,7 @@ Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä pii
 
 **Pyydä tekoälyä piirtämään aikasarjana pisteinä** antureiden A ja B lämpötilat (`Timestamp` x-akselilla ja `Temperature` y-akselilla). Tarkista, että merkkijonona tallennettu `Timestamp` muunnetaan ensin `datetime`-aikaleimaksi — muuten Python käsittelee jokaisen kellonajan erillisenä kategoriana ja kuvaajan piirtäminen jumiutuu. Milloin virhelukemat alkoivat kummallakin anturilla?
 
-#### Histogrammi (engl. histogram)
+### Histogrammi (engl. histogram)
 
 - X-akselilla lukuarvojen tasaväliset luokat (intervallit, engl. *bins*)
 - Y-akselilla kuhunkin väliin osuvien havaintojen lukumäärä aineistossa
@@ -511,7 +537,7 @@ Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä pii
 
 *Pohdi:* Millä pitoisuusvälillä valtaosa navetan mittauksista on? Ulkoilman hiilidioksidipitoisuus on noin 400 ppm — näkyykö jakaumassa sitä pienempiä arvoja tai hyvin suuria yksittäisiä lukemia, jotka venyttävät x-akselia oikealle? (Vinkki: voit pyytää tekoälyä kokeilemaan logaritmista y-akselia, jolloin myös yksittäiset poikkeavat havainnot erottuvat.)
 
-#### Lämpökartta eli korrelaatiomatriisi (engl. heatmap)
+### Lämpökartta eli korrelaatiomatriisi (engl. heatmap)
 
 - Ruudun väri määräytyy lukuarvon mukaan
 - Korrelaatiokertoimet vaihtelevat välillä −1…+1 (+1 = voimakas samansuuntainen yhteys, 0 = ei lineaarista yhteyttä, −1 = voimakas vastakkaissuuntainen yhteys)
@@ -526,20 +552,72 @@ Harjoitellaan seuraavaksi eri kuvaajatyyppien tekoa pyytämällä tekoälyä pii
 
 Jos aikaa jää, voit tutustua erilaisiin kuvaajavaihtoehtoihin [Matplotlibin esimerkkigalleriassa](https://matplotlib.org/stable/gallery/index.html). Voit myös kokeilla pyytää tekoälyä muokkaamaan tekemääsi kuvaajaa — esimerkiksi rajaamaan XY-diagrammin akselit pelkästään järkevälle lämpötilavälille (muuttamatta itse dataa), vaihtamaan värejä ja pisteiden läpinäkyvyyttä tai asettelemaan useamman kuvaajan vierekkäin.
 
-### Keskustelua ulkoisista datatarpeista data-analytiikkaprojektiin liittyen
+## Ulkoisia datalähteitä
 
-Keskustellaan data-analytiikkaprojektiin tarvittavista/toivotuista lisädatoista ja että mistä niitä voisi saada.
+Data-analyysiprojektin toimeksiannot keskittyvät tänä vuonna joko maatilan traktoreiden tai lypsykoneen keräämään dataan. Seuraavat ulkoisista lähteistä saatavat historialliset datat saattavat tuoda analyyseihin lisäarvoa. Luennon lopussa annettavassa viikkotehtävässä arvioidaan lisädatoja data-analyysiprojektin kannalta.
 
-Muutama esimerkki:
-* Paituli -- paikkatietodataa suomalaisilta tuottajilta https://paituli.csc.fi/
-* Pelto-observatorio -- hiilensidontaan liittyvää maatilaa koskevaa dataa koottuna eri lähteistä https://www.fieldobservatory.org/index.php/online-field-data/
+Voit kopioida kunkin esimerkkityökirjan osoitteen selaimen osoitekentästä avattuasi työkirjan GitHubissa, minkä jälkeen voit tuoda sen suoraan Colabiin [Google Colabissa](https://colab.research.google.com/) näin: Upload notebook -> GitHub -> liitä osoite syötekenttään.
 
-### Viikkotehtävä 3
+### Suomalainen avoin paikkatietodata
 
-[Viikkotehtävä 3](Harjoitus3.md)
+CSC (Tieteen tietotekniikan keskus Oy) Paituli-palvelu jakaa ja luetteloi suomalaisten datantuottajien ja muuta Suomea koskevaa avointa paikkatietodataa. https://paituli.csc.fi/
 
-# 4. Luento 18.11.2026
-<!-- Älä muuta luennon otsikkoa, koska siihen syvälinkataan Moodlesta. Lisää lyhyt kuvaus alle! -->
+### Korkeusmalli ja satelliitti-indeksit
+
+Ilmatieteen laitoksen **Tuulituhohaukka-palvelu** tuottaa mielenkiintoisia jatkuvasti päivittyviä datoja. https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/root.json
+
+* **Korkeusmalli** https://browser.moregeo.it/external/paituli.csc.fi/geoserver/ogc/stac/v1/collections/2m_digital_terrain_model_products_at_fmi perustuu MML:n dataan
+
+* **ESA:n Sentinel 2 -satelliittien kuvista lasketut indeksit** https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json
+
+[Työkirja](lecture4/field_tracks_and_stac.ipynb), tehty pääosin Gemini 4 Hydrogen tekoälymallilla ja promptilla:
+
+> Let's create a new Lecture 4 notebook. Take the field blocks with "id" values "mu_0" and "mu_1" from https://field-observatory.data.lit.fmi.fi/fieldobs_blocks_translated.geojson?date=2026-11-17-12h and copy their geometries to your Python code. Generate also plausible timestamped tractor tracks working on the two fields on a single day on two different months in summer 2025.
+>
+> Use network-friendly reads to obtain the satellite image index data from https://pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json along the tracks.
+>
+> Also read https://pta.data.lit.fmi.fi/stac/catalog/MML-DTM-2m/MML-DTM-2m.json to obtain the height curve along the timestamped track.
+>
+> Plot these time series in the notebook.
+
+![Korkeusmalli ja traktorin ajoura](assets/dem.png)
+
+![Sentinel-2-indeksit ajouralla](assets/ndvi.png)
+
+### Säädata
+
+**Ilmatieteen laitoksen historiallinen sääasemadata** päivä- ja tuntitasolla https://en.ilmatieteenlaitos.fi/open-data-manual
+
+[Työkirja](lecture4/fmi_weather_data.ipynb), tehty pääosin promptilla:
+
+> Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
+
+![Ilmatieteen laitoksen päivätason säähavainnot](assets/fmi_weather.png)
+
+![Ilmatieteen laitoksen säteilyhavainnot](assets/fmi_radiation.png)
+
+Sääasemadatojen lisäksi Ilmatieteen laitoksella on kuukausittaista "gridattua" dataa, jossa säämuuttujien arvoja arvioidaan myös sääasemien ulkopuolella. Tarjolla on myös salamaniskudataa.
+
+### Ilmastodata
+
+NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. 
+
+**Copernicus Climate Data Store** https://cds.climate.copernicus.eu/
+
+### Satelliittidata
+
+NASA:n ja ESA:n satelliittien data on lähtökohtaisesti ilmaista, mutta niiden lataaminen voi vaatia rekisteröitymisen datanlatauspalveluun. 
+
+**Copernicus Data Space Ecosystem** https://dataspace.copernicus.eu/
+
+## Laskentapalveluita satelliitti- ym. datalle
+
+Google ja Microsoft tarjoavat omia palveluita, joiden kautta saa monenlaista dataa kuten satelliittidataa ja voi tehdä laskentaa niistä ja omista datoista.
+
+* Google Earth Engine https://earthengine.google.com/
+* Microsoft Planetary Computer https://planetarycomputer.microsoft.com/
+
+## Viikkotehtävä 4
 
 [Viikkotehtävä 4](Harjoitus4.md)
 
