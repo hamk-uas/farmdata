@@ -11,6 +11,11 @@ import pandas as pd
 df_fuel = pd.read_csv('https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/tractor_fuel.csv')
 df_gps = pd.read_csv('https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/2026/assets/tractor_gps.csv')
 
+# Convert timestamp to datetime if needed
+df_fuel["timestampKafka"] = pd.to_datetime(df_fuel["timestampKafka"], format='ISO8601')
+df_gps["timestampKafka"] = pd.to_datetime(df_gps["timestampKafka"], format='ISO8601')
+
+
 print(df_fuel.head())
 print("")
 print(df_gps.head())
