@@ -1,4 +1,4 @@
-<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 5ec8cbad3ef9eb5a455fd42243c2b63f06ab5dcf. To catch up, translate the changes shown by: git diff 5ec8cbad3ef9eb5a455fd42243c2b63f06ab5dcf HEAD -- 2026/Luennot.md (then update the commit hash here). -->
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit a2eddd0879dde03858cc760b15fb37d071dadba1. To catch up, translate the changes shown by: git diff a2eddd0879dde03858cc760b15fb37d071dadba1 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
 Autumn 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
@@ -479,54 +479,6 @@ url_d = "https://raw.githubusercontent.com/hamk-uas/farmdata/refs/heads/main/202
 1. **Ask the AI to read all four CSV files**, add a `"Sensor"` column with value `"A"`, `"B"`, `"C"`, or `"D"` to each, and concatenate the tables vertically into a single DataFrame named `df_barn` without filtering out any rows.
 1. **Explore `df_barn` with the help of AI:** print the first rows (`head()`), column data types (`dtypes`), missing value counts per column (`isna().sum()`), and basic summary statistics for numerical columns such as minimum, maximum, and mean (`describe()`). What anomalies do you notice in the numbers even before plotting?
 
-### Task 3: Plotting dirty barn data
-
-Next, practice creating different types of plots by asking the AI to draw plots from the unfiltered `df_barn` table (for example using `matplotlib.pyplot`). Put each part in its own code cell and ask for clear axis labels.
-
-#### Bar chart
-
-- Categorical variable on the x-axis
-- A numerical value corresponding to each category on the y-axis, such as a mean or count
-
-**Ask the AI to draw a bar chart** with the sensor (`Sensor`) on the x-axis and the mean temperature (`Temperature`) of each sensor on the y-axis.
-
-**Ask for a second bar chart** with `Sensor` on the x-axis and the count of missing `CO2` observations for each sensor on the y-axis.
-
-*Think:* How do the mean temperatures of sensors A and B look compared to sensors C and D? Which sensor clearly has the most missing `CO2` values?
-
-#### XY plot (scatter plot)
-
-- Values of the first variable on the x-axis and values of the second variable on the y-axis
-- Each observation is plotted as a point `(x, y)`, revealing relationships between variables as well as *outliers*
-
-**Ask the AI to draw a scatter plot** from `df_barn` with `Temperature` on the x-axis and `Humidity` on the y-axis. What do the erroneous readings do to the scale of the plot, and what is the humidity reading when the temperature is erroneous?
-
-**Ask the AI to plot as a time series of points** the temperatures of sensors A and B (`Timestamp` on the x-axis and `Temperature` on the y-axis). Make sure that `Timestamp`, which is stored as a string, is first converted to a `datetime` timestamp — otherwise Python treats every timestamp as a separate category and plotting stalls. When did the erroneous readings start on each sensor?
-
-#### Histogram
-
-- Equally spaced value intervals (*bins*) on the x-axis
-- The number of observations falling into each interval on the y-axis
-
-**Ask the AI to draw a histogram** of the carbon dioxide concentrations (`CO2`) in `df_barn` so that the left edge of the first bar starts at `0` and the bin width is `200` ppm.
-
-*Think:* In what concentration range do most of the barn measurements fall? Outdoor air carbon dioxide concentration is around 400 ppm — do you see lower values than that in the distribution, or very high individual readings that stretch the x-axis to the right? (Tip: you can ask the AI to try a logarithmic y-axis so that individual outlier observations also stand out.)
-
-#### Heatmap (correlation matrix)
-
-- The color of each cell is determined by a numerical value
-- Correlation coefficients range from −1 to +1 (+1 = strong positive relationship, 0 = no linear relationship, −1 = strong negative relationship)
-
-**Ask the AI to draw a 2D heatmap** showing the correlation between all numerical variables (`CO2`, `Humidity`, `Light`, `Motion`, `Temperature`) in `df_barn`, with the numerical values displayed inside the cells.
-
-**Next, ask for the corresponding heatmap using only the rows from sensor C** (`Sensor == "C"`).
-
-*Think:* Compare the correlation between temperature (`Temperature`) and humidity (`Humidity`) in the full unfiltered dataset versus sensor C alone. How much does dirty data change the conclusion?
-
-### Other plot types and customizing plots
-
-If time permits, you can browse different plot options in the [Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html). You can also ask the AI to customize a plot you created — for example limiting the scatter plot axes to a reasonable temperature range (without modifying the data itself), changing colors and point transparency, or arranging multiple plots side by side.
-
 ### Discussion on external data needs for the data analytics project
 
 Let's discuss what additional data are needed or desired for the data analytics project and where they could be obtained.
@@ -541,6 +493,129 @@ A couple of examples:
 
 # 4. Lecture 18.11.2026
 <!-- Do not change the lecture heading, because Moodle deep-links to it! Add a short description below! -->
+
+In this lecture we continue drawing plots from the unfiltered barn data (`df_barn`) of Task 2 from the previous lecture and explore various public data sources to support the data analysis project.
+
+## Additional guidance on using AI
+
+AI models, especially cheaper ones, cannot always "read between the lines" of the instructions given to them and may sometimes follow instructions all too literally. Just like when giving a task to a human, AI performs better when you explain the broader background and big-picture goals, so that it better understands what is needed instead of following a carelessly worded prompt to a fault. Another option, of course, is to write a very precise and well-targeted prompt, but that is a slower and more laborious approach. AI models are constantly evolving, and the trend is that they understand instructions ever more flexibly in the same way as a human, drawing on their broad and deep built-in knowledge of various topics.
+
+## In-lecture exercise 1: Plotting dirty Pandas barn data
+
+Let's return to the barn data from Task 2 of the previous lecture. Open your Colab notebook from Lecture 3 Task 2, or if you no longer have it saved, add the code snippet from the task instructions to a new code cell and give the following instruction to the AI:
+
+```text
+Read all four CSV files and add a 'Sensor' column to each dataframe with the value 'A', 'B', 'C', or 'D' depending on which URL it came from. Do not clean the data in any way. Concatenate the contents of the dataframes vertically into a single dataframe named df_barn. Print the contents of df_barn.
+```
+
+Next, practice creating different types of plots by asking the AI to draw plots from the unfiltered `df_barn` table (for example using `matplotlib.pyplot`). Put each part in its own code cell and ask for clear axis labels.
+
+### Bar chart
+
+- Categorical variable on the x-axis
+- A numerical value corresponding to each category on the y-axis, such as a mean or count
+
+**Ask the AI to draw a bar chart** with the sensor (`Sensor`) on the x-axis and the mean temperature (`Temperature`) of each sensor on the y-axis.
+
+**Ask for a second bar chart** with `Sensor` on the x-axis and the count of missing `CO2` observations for each sensor on the y-axis.
+
+*Think:* How do the mean temperatures of sensors A and B look compared to sensors C and D? Which sensor clearly has the most missing `CO2` values?
+
+### XY plot (scatter plot)
+
+- Values of the first variable on the x-axis and values of the second variable on the y-axis
+- Each observation is plotted as a point `(x, y)`, revealing relationships between variables as well as *outliers*
+
+**Ask the AI to draw a scatter plot** from `df_barn` with `Temperature` on the x-axis and `Humidity` on the y-axis. What do the erroneous readings do to the scale of the plot, and what is the humidity reading when the temperature is erroneous?
+
+**Ask the AI to plot as a time series of points** the temperatures of sensors A and B (`Timestamp` on the x-axis and `Temperature` on the y-axis). Make sure that `Timestamp`, which is stored as a string, is first converted to a `datetime` timestamp — otherwise Python treats every timestamp as a separate category and plotting stalls. When did the erroneous readings start on each sensor?
+
+### Histogram
+
+- Equally spaced value intervals (*bins*) on the x-axis
+- The number of observations falling into each interval on the y-axis
+
+**Ask the AI to draw a histogram** of the carbon dioxide concentrations (`CO2`) in `df_barn` so that the left edge of the first bar starts at `0` and the bin width is `200` ppm.
+
+*Think:* In what concentration range do most of the barn measurements fall? Outdoor air carbon dioxide concentration is around 400 ppm — do you see lower values than that in the distribution, or very high individual readings that stretch the x-axis to the right? (Tip: you can ask the AI to try a logarithmic y-axis so that individual outlier observations also stand out.)
+
+### Heatmap (correlation matrix)
+
+- The color of each cell is determined by a numerical value
+- Correlation coefficients range from −1 to +1 (+1 = strong positive relationship, 0 = no linear relationship, −1 = strong negative relationship)
+
+**Ask the AI to draw a 2D heatmap** showing the correlation between all numerical variables (`CO2`, `Humidity`, `Light`, `Motion`, `Temperature`) in `df_barn`, with the numerical values displayed inside the cells.
+
+**Next, ask for the corresponding heatmap using only the rows from sensor C** (`Sensor == "C"`).
+
+*Think:* Compare the correlation between temperature (`Temperature`) and humidity (`Humidity`) in the full unfiltered dataset versus sensor C alone. How much does dirty data change the conclusion?
+
+### Other plot types and customizing plots
+
+If time permits, you can browse different plot options in the [Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html). You can also ask the AI to customize a plot you created — for example limiting the scatter plot axes to a reasonable temperature range (without modifying the data itself), changing colors and point transparency, or arranging multiple plots side by side.
+
+## External data sources
+
+This year's assignments in the data analysis project focus on data collected either by farm tractors or by a milking machine. The following historical datasets available from external sources may add value to the analyses. In the weekly exercise given at the end of the lecture, you will evaluate additional datasets from the perspective of your data analysis project.
+
+You can copy the URL of each example notebook from the browser's address bar after opening the notebook on GitHub, and then import it directly into Colab in [Google Colab](https://colab.research.google.com/) as follows: Upload notebook -> GitHub -> paste the URL into the input field.
+
+### Digital elevation model and satellite indices
+
+The Finnish Meteorological Institute's **Tuulituhohaukka** service produces interesting continuously updated datasets. https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/root.json
+
+* **Digital elevation model** https://browser.moregeo.it/external/paituli.csc.fi/geoserver/ogc/stac/v1/collections/2m_digital_terrain_model_products_at_fmi based on data from the National Land Survey of Finland (MML)
+
+* **Indices calculated from ESA Sentinel-2 satellite imagery** https://browser.moregeo.it/external/pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json
+
+[Notebook](lecture4/field_tracks_and_stac.ipynb), created mainly with the Gemini 4 Hydrogen AI model and the prompt:
+
+> Let's create a new Lecture 4 notebook. Take the field blocks with "id" values "mu_0" and "mu_1" from https://field-observatory.data.lit.fmi.fi/fieldobs_blocks_translated.geojson?date=2026-11-17-12h and copy their geometries to your Python code. Generate also plausible timestamped tractor tracks working on the two fields on a single day on two different months in summer 2025.
+>
+> Use network-friendly reads to obtain the satellite image index data from https://pta.data.lit.fmi.fi/stac/catalog/Sentinel-2_indeksimosaiikit/Sentinel-2_indeksimosaiikit.json along the tracks.
+>
+> Also read https://pta.data.lit.fmi.fi/stac/catalog/MML-DTM-2m/MML-DTM-2m.json to obtain the height curve along the timestamped track.
+>
+> Plot these time series in the notebook.
+
+![Elevation model and tractor track](assets/dem.png)
+
+![Sentinel-2 indices along the track](assets/ndvi.png)
+
+### Weather data
+
+**Historical weather station data from the Finnish Meteorological Institute** at daily and hourly resolution https://en.ilmatieteenlaitos.fi/open-data-manual
+
+[Notebook](lecture4/fmi_weather_data.ipynb), created mainly with the prompt:
+
+> Investigate what historical data is available from https://en.ilmatieteenlaitos.fi/open-data-manual from the latest years (default 2020-2026) that could complement my farm milk robot and/or tractor telemetry data (not given). Write a Python program to download the relevant data from a weather station closest to the given location, 60.817 N, 23.767 E by default. If the weather station doesn't have some variables, use for that variable the nearest weather station that does.
+
+![Daily weather observations from the Finnish Meteorological Institute](assets/fmi_weather.png)
+
+![Radiation observations from the Finnish Meteorological Institute](assets/fmi_radiation.png)
+
+In addition to weather station data, the Finnish Meteorological Institute provides monthly "gridded" data in which weather variable values are estimated outside weather stations as well. Lightning strike data are also available.
+
+### Climate data
+
+Data from NASA and ESA satellites are generally free of charge, although downloading them may require registering with a data download service.
+
+**Copernicus Climate Data Store** https://cds.climate.copernicus.eu/
+
+### Satellite data
+
+Data from NASA and ESA satellites are generally free of charge, although downloading them may require registering with a data download service.
+
+**Copernicus Data Space Ecosystem** https://dataspace.copernicus.eu/
+
+## Computing services for satellite and other data
+
+Google and Microsoft offer their own services that provide access to a wide range of data, such as satellite data, and allow running computations on them and on your own data.
+
+* Google Earth Engine https://earthengine.google.com/
+* Microsoft Planetary Computer https://planetarycomputer.microsoft.com/
+
+## Weekly exercise 4
 
 [Weekly exercise 4](Exercise4.md)
 
