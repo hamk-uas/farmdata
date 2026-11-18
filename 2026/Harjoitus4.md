@@ -3,7 +3,15 @@
 ## Osa 1: Ulkoiset datalähteet
 Miettikää mitä ulkoisia datalähteitä tai datatuotteita tiiminne voisi käyttää. Palauttakaa lista harkitsemistanne datalähteistä tai datatuotteista ja lyhyet arviot, millä tavoin kyseinen ulkoinen data voisi tuoda lisäarvoa analyysiprojektiin. Jos näette haasteita ulkoisen datan käyttöönotossa, voitte kirjata niitäkin ylös.
 
-## Osa 2: Traktoriaineistoon tutustuminen Pythonilla (täydentyy)
+## Osa 2: Traktoriaineistoon tutustuminen Pythonilla
+
+Tavoite on löytää tapoja havainnollistaa traktorin käyttöprofiilia. Haastattele tekoälyä ideoista ja dokumentoi keskustelu tiivistetysti. Käytä erilaisia kuvaajatyyppejä. Mitä aineistoa erityisesti tässä pitäisi vielä hankkia lisää (esim. peltotyyppien jakauma).
+
+Tutki esimerkiksi
+* Ajoreittien pituuksia ja kestoja sekä keski- ja kokonaiskulutuksia.
+* Päiväkohtaista ajomäärää ja etäisyyttä lähtöpisteestä.
+
+Tarvittaessa voit palauttaa pohdinnat ja koodin eri PDF-tiedostoina tai voit dokumentoida kaiken Colabiin. Valitse niin, että tulostus on luettava.
 
 ```
 import pandas as pd
