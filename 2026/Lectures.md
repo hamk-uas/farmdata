@@ -1,4 +1,4 @@
-<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit a2eddd0879dde03858cc760b15fb37d071dadba1. To catch up, translate the changes shown by: git diff a2eddd0879dde03858cc760b15fb37d071dadba1 HEAD -- 2026/Luennot.md (then update the commit hash here). -->
+<!-- Translation sync: this file is up to date with the Finnish source 2026/Luennot.md as of commit 4c7e9edfb88846eddd01c8e445014e95feb4559c. To catch up, translate the changes shown by: git diff 4c7e9edfb88846eddd01c8e445014e95feb4559c HEAD -- 2026/Luennot.md (then update the commit hash here). -->
 Autumn 2026
 
 © 2026 HAMK Hämeen Ammattikorkeakoulu. Authors: Pirita Rantala, Olli Koskela, Olli Niemitalo
@@ -559,6 +559,10 @@ If time permits, you can browse different plot options in the [Matplotlib galler
 This year's assignments in the data analysis project focus on data collected either by farm tractors or by a milking machine. The following historical datasets available from external sources may add value to the analyses. In the weekly exercise given at the end of the lecture, you will evaluate additional datasets from the perspective of your data analysis project.
 
 You can copy the URL of each example notebook from the browser's address bar after opening the notebook on GitHub, and then import it directly into Colab in [Google Colab](https://colab.research.google.com/) as follows: Upload notebook -> GitHub -> paste the URL into the input field.
+
+### Finnish open spatial data
+
+The Paituli service operated by CSC (IT Center for Science) distributes and catalogs open spatial data from Finnish data producers as well as other open spatial data covering Finland. https://paituli.csc.fi/
 
 ### Digital elevation model and satellite indices
 
